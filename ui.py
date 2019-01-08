@@ -1,5 +1,6 @@
 import tkinter as tk
-from partPicker import get_classes
+from tkinter import ttk, Scrollbar, Listbox
+from partPicker import get_classes, get_subclasses
 
 class Application(tk.Frame):
 	def __init__(self, master=None):
@@ -9,62 +10,93 @@ class Application(tk.Frame):
 		self.create_widgets()
 
 	def create_widgets(self):
+		# init top frame
 		self.create_top_parameters()
 
-		frame_bottom = tk.Frame(self)
-		frame_bottom.pack(side="bottom")
-		self.create_bot_left_onto(frame_bottom)
-		self.create_bot_mid_results(frame_bottom)
-		self.create_bot_right_build(frame_bottom)
+		# init middle frame
+		frame_middle = tk.Frame(self)
+		frame_middle.pack(side="bottom")
+		self.create_mid_left_onto(frame_middle)
+		self.create_mid_results(frame_middle)
+		self.create_mid_right_build(frame_middle)
 
-		# frame_bottom = tk.Frame(self)
-		# frame_bottom.pack(side="bottom")
+		# init bottom frame
+		self.create_bottom_stats()
 
-		# self.hi_there = tk.Button(frame_bottom)
-		# self.hi_there["text"] = "Hello World\n(click me)"
-		# self.hi_there["command"] = self.say_hi
-		# self.hi_there.pack(side="left")
+	def create_combo_label(self, label_name, combo_id, frame):
+		label_computer = tk.Label(frame, text=label_name, width=20, anchor="w")
+		label_computer.pack(side="top")
+		combo_computer = ttk.Combobox(frame, values=get_subclasses(combo_id))
+		combo_computer.current(1)
+		combo_computer.pack(side="top")
 
-		# self.quit = tk.Button(frame_bottom, text="QUIT", fg="red", command=self.master.destroy)
-		# self.quit.pack(side="bottom")
-
-		# self.test = tk.Label(frame_bottom, text="TestTest")
-		# self.test.pack(side="right")
+	def create_entry_label(self, label_name, entry_text, frame):
+		label_name = tk.Label(frame, text=label_name, width=10, anchor="w")
+		label_name.pack(side="left")
+		label_val = tk.Label(frame, text=entry_text, width=10, anchor="e")
+		label_val.pack(side="left")
 
 	def create_top_parameters(self):
 		frame_top = tk.Frame(self)
 		frame_top.pack(side="top")
 
-		self.price_label = tk.Label(frame_top, text="Max Price")
-		self.price_label.pack(side="left")
-		self.price_entry = tk.Entry(frame_top, width=10)
-		self.price_entry.pack(side="left", padx=10, pady=10)
-		self.price_btn = tk.Button(frame_top, text="Search", fg="black", command=self.search)
+		self.cur_cost_label = tk.Label(frame_top, text="Max Price")
+		self.cur_cost_label.pack(side="left")
+		self.cur_cost_val = tk.Entry(frame_top, width=10)
+		self.cur_cost_val.pack(side="left", padx=10, pady=10)
+		self.price_btn = tk.Button(frame_top, text="Set Price", fg="black", command=self.search)
 		self.price_btn.pack(side="right")
 
-	def create_bot_left_onto(self, frame_bottom):
-		frame_bot_left = tk.Frame(frame_bottom)
+	def create_mid_left_onto(self, frame_middle):
+		frame_bot_left = tk.Frame(frame_middle)
 		frame_bot_left.pack(side="left")
 
-		self.test = tk.Label(frame_bot_left, text=get_classes())
-		self.test.pack(side="left")
+		### Computer | subclasses
+		self.create_combo_label("Pre-Built Computer", "RzT3FDGFiwtff6PlbuV91w", frame_bot_left)
 
-		
+		### Memory | subclasses
+		self.create_combo_label("Memory", "RkhO2IgjEo6T4KIS84RuJr", frame_bot_left)
 
-	def create_bot_mid_results(self, frame_bottom):
-		frame_bot_mid = tk.Frame(frame_bottom)
+		### Parts | subclasses
+		self.create_combo_label("Parts", "RDpBs6DXJfwjWljvKnjFFK7", frame_bot_left)
+
+		### Peripherals | subclasses
+		self.create_combo_label("Peripherals", "R6KTEriqId00kTIZki5blq", frame_bot_left)
+
+	def create_mid_results(self, frame_middle):
+		frame_bot_mid = tk.Frame(frame_middle, bd=4)
 		frame_bot_mid.pack(side="left")
+		frame_scrollbar = tk.Frame(frame_bot_mid)
+		frame_scrollbar.pack(side="left")
 
-		self.testt = tk.Label(frame_bot_mid, text="middy")
-		self.testt.pack(side="left")
+		scrollbar = Scrollbar(frame_scrollbar)
+		scrollbar.pack(side="right", fill="y")
 
-	def create_bot_right_build(self, frame_bottom):
-		frame_bot_right = tk.Frame(frame_bottom)
+		listbox = Listbox(frame_scrollbar, yscrollcommand=scrollbar.set)
+		for i in range(1000):
+			listbox.insert("end", str(i))
+			listbox.pack(side="left", fill="both")
+
+		scrollbar.config(command=listbox.yview)
+
+	def create_mid_right_build(self, frame_middle):
+		frame_bot_right = tk.Frame(frame_middle)
 		frame_bot_right.pack(side="left")
 
-		self.testtt = tk.Label(frame_bot_right, text="righty")
-		self.testtt.pack(side="left")
+		for x in get_subclasses("RDpBs6DXJfwjWljvKnjFFK7"):
+			frame_tmp = tk.Frame(frame_bot_right)
+			frame_tmp.pack(side="top")
+			self.create_entry_label(x, "value", frame_tmp)
 
+	def create_bottom_stats(self):
+		frame_bottom = tk.Frame(self)
+		frame_bottom.pack(side="bottom")
+
+		self.cur_cost_label = tk.Label(frame_bottom, text="Current Cost")
+		self.cur_cost_label.pack(side="left")
+		self.cur_cost_val = tk.Label(frame_bottom, text="100")
+		self.cur_cost_val.pack(side="left", padx=10, pady=10)
+	
 
 	def say_hi(self):
 		print("hi there, everyone!")
