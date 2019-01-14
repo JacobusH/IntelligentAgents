@@ -649,7 +649,7 @@
 
     <!-- http://webprotege.stanford.edu/RSlFT3nhWinjtO3YMz63KY -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RSlFT3nhWinjtO3YMz63KY">
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RSlFT3nhWinjtO3YMz63KY#Speakers">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Output"/>
         <rdfs:label>Speakers</rdfs:label>
     </owl:Class>

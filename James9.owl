@@ -1325,7 +1325,7 @@
     </owl:Class>
     
 
-
+    <!-- note Memory -->
     <!-- http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory">

@@ -516,7 +516,7 @@
     </owl:Class>
     
 
-
+    <!-- note MEMORY -->
     <!-- http://webprotege.stanford.edu/Memory -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/Memory">

@@ -6,7 +6,7 @@ from owlready2 import *
 from partPicker import get_label, get_subclasses
 
 # onto = get_ontology("onto2.owl").load()
-onto = get_ontology("JamesOnt4.owl").load()
+onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James6.owl").load()
 obo = get_namespace("http://webprotege.stanford.edu/")
 # print(list(onto.classes()))
 

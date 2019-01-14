@@ -9,9 +9,9 @@ is_debug = True
 def get_label(x):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\JamesOnt2.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James13.owl").load()
 	else:
-		onto = get_ontology("JamesOnt2.owl").load()
+		onto = get_ontology("James13.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/")
 	is_str = isinstance(x, str)
 
@@ -31,9 +31,9 @@ def get_label(x):
 def get_classes():
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\JamesOnt2.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James13.owl").load()
 	else:
-		onto = get_ontology("JamesOnt2.owl").load()
+		onto = get_ontology("James13.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/") # for web version only
 
 	classes = []
@@ -52,16 +52,22 @@ def get_classes():
 		classes.append(class_name)
 	return classes
 
-def get_subclasses(class_id):
+def get_subclasses(class_id, is_IRIS = False):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\JamesOnt2.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James13.owl").load()
 	else:
-		onto = get_ontology("JamesOnt2.owl").load()
+		onto = get_ontology("James13.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/") # web version only
 
+	search_subclasses = None
+	if is_IRIS:
+		search_subclasses = onto.search(subclass_of = IRIS[class_id]) # bleh finally got this POS to work
+	else:
+		search_subclasses = onto.search(subclass_of = obo[class_id]) # bleh finally got this POS to work
+
 	subclasses = []
-	search_subclasses = onto.search(subclass_of = obo[class_id]) # bleh finally got this POS to work
+	
 	for x in search_subclasses:
 		subclasses.append(get_label(x))
 	return subclasses
