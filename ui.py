@@ -7,6 +7,7 @@ class Application(tk.Frame):
 		super().__init__(master)
 		self.master = master
 		self.pack()
+		pad=3
 		self.create_widgets()
 
 	def create_widgets(self):
@@ -104,10 +105,18 @@ class Application(tk.Frame):
 	def search(self):
 		print("searching")
 
+	def toggle_geom(self,event):
+		geom=self.master.winfo_geometry()
+		print(geom,self._geom)
+		self.master.geometry(self._geom)
+		self._geom=geom
+
 
 
 # init the app
 root = tk.Tk()
+root.attributes('-fullscreen', True)
+root.bind('<Escape>',lambda e: root.destroy())
 app = Application(master=root)
 
 # method calls to the window manager class
