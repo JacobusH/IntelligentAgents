@@ -119,7 +119,7 @@ def get_obo_elem(elem_id):
 	# sync_reasoner()
 	return obo[elem_id]
 
-def create_computer(comp_name):
+def save_computer(comp_name, parts):
 	onto = None
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
@@ -127,7 +127,7 @@ def create_computer(comp_name):
 		onto = get_ontology("James25.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# make the computer
-	obo.Computer(comp_name)
+	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = [])
 	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl")
 
 

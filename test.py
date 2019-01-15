@@ -4,10 +4,10 @@ import math
 import pprint
 from owlready2 import *
 from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel
-import my_shared
 
-# onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
-# obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
+
+onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 # sync_reasoner()
 
 ### working list all classes
@@ -41,10 +41,13 @@ import my_shared
 # new_gpu3 = obo.Corsair_200R("indiv_case_3")
 # onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James16.owl")
 
+# my_drug = obo.Case("my_case", namespace = onto, item_price = [100])
+# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl")
+
 ### working get individuals
 # for i in obo.Corsair_200R.instances(): # has direct indivs
 # 	print(i)
-for i in Shared.obo.Case.instances(): # only has bottom level indivs
+for i in obo.Case.instances(): # only has bottom level indivs
 	print(i)
 
 

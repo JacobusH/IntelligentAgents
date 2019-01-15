@@ -1,16 +1,22 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
-from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs
+from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, save_computer
 from ui_helpers import create_right_labels, replace_right_label
 import math
 import random
+from owlready2 import *
 
 class Application(tk.Frame):
+	is_debug = True
+	onto = None
+	obo = None
+
 	def __init__(self, master=None):
 		super().__init__(master)
 		self.master = master
 		self.pack()
 		pad=3
+		# create the ui
 		self.create_widgets()
 
 	def create_widgets(self):
@@ -127,7 +133,9 @@ class Application(tk.Frame):
 		print("hallo")
 
 	def save_computer(self):
-		compName = self.comp_name.get()
+		
+
+		save_computer(compName, parts)
 
 	def toggle_geom(self, event):
 		geom=self.master.winfo_geometry()
@@ -137,7 +145,7 @@ class Application(tk.Frame):
 
 	def combo_selected(self, event):
 		selected_piece = self.combo_computer.get()
-		sub_pieces = get_subclasses_recur(selected_piece)
+		sub_pieces = get_subclasses_recur(selected_piece, obo, onto)
 		# now delete everything currently in the listbox
 		self.listbox.delete(0, tk.END)
 		# now add the subpieces
