@@ -1,7 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
-from partPicker import get_classes, get_subclasses
+from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs
+from ui_helpers import create_right_labels, replace_right_label
 import math
+import random
 
 class Application(tk.Frame):
 	def __init__(self, master=None):
@@ -45,18 +47,20 @@ class Application(tk.Frame):
 		self.price_btn = tk.Button(frame_top, text="Set Price", fg="black", command=self.search)
 		self.price_btn.pack(side="right")
 
+	# MAKE LEFT COLUMN
 	def create_mid_left_onto(self, frame_middle):
 		frame_bot_left = tk.Frame(frame_middle, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_left.pack(side="left", fill="none", expand=True, padx=20, pady=20)
 		### Computer | subclasses
-		self.create_combo_label("Pre-Built Computer", "RzT3FDGFiwtff6PlbuV91w", frame_bot_left)
+		self.create_combo_label("Pre-Built Computer", 'Computer', frame_bot_left)
 		### Memory | subclasses
-		self.create_combo_label("Memory", "http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory", frame_bot_left, True)
+		self.create_combo_label("Memory", "Memory", frame_bot_left)
 		### Parts | subclasses
 		self.create_combo_label("Parts", "RDpBs6DXJfwjWljvKnjFFK7", frame_bot_left)
 		### Peripherals | subclasses
-		self.create_combo_label("Peripherals", "R6KTEriqId00kTIZki5blq", frame_bot_left)
+		# self.create_combo_label("Peripherals", "R6KTEriqId00kTIZki5blq", frame_bot_left)
 
+	# MAKE MIDDLE COLUMN
 	def create_mid_results(self, frame_middle):
 		frame_bot_mid = tk.Frame(frame_middle, bd=4, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_mid.pack(side="left")
@@ -64,23 +68,26 @@ class Application(tk.Frame):
 		frame_scrollbar.pack(side="left", fill="both", expand=True, padx=20, pady=20)
 
 		# make scrollbar & listbox
-		scrollbar = Scrollbar(frame_scrollbar)
-		scrollbar.pack(side="right", fill="y")
-		listbox = Listbox(frame_scrollbar, yscrollcommand=scrollbar.set, width=math.floor((rootWidth / 3) - 100 ), height=math.floor((rootHeight / 3) - 100 ))
+		self.scrollbar = Scrollbar(frame_scrollbar)
+		self.scrollbar.pack(side="right", fill="y")
+		self.listbox = Listbox(frame_scrollbar, yscrollcommand=self.scrollbar.set, width=math.floor((rootWidth / 3) - 100 ), height=math.floor((rootHeight / 3) - 100 ))
+		self.listbox.bind('<<ListboxSelect>>', self.lb_onselect)
 		for i in range(1000):
-			listbox.insert("end", str(i))
-			listbox.pack(side="left", fill="both")
-		scrollbar.config(command=listbox.yview)
+			self.listbox.insert("end", str(i))
+		self.listbox.pack(side="left", fill="both")
+		self.scrollbar.config(command=self.listbox.yview)
 
+	# MAKE RIGHT COLUMN
 	def create_mid_right_build(self, frame_middle):
 		frame_bot_right = tk.Frame(frame_middle, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_right.pack(side="left", fill="none", expand=True, padx=20, pady=20)
 
-		# for x in get_subclasses("RDpBs6DXJfwjWljvKnjFFK7"):	### NOTE: recursively gets subclasses... we want only first level
-		for x in ['Case', 'MotherBoard', 'PSU', 'GPU', 'CPU', 'Case']:
-			frame_tmp = tk.Frame(frame_bot_right)
-			frame_tmp.pack(side="top")
-			self.create_entry_label(x, "Super long name that really really doesn't matter", frame_tmp)
+		# we need to have named labels for the replace....
+		# for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts
+		# 	frame_tmp = tk.Frame(frame_bot_right)
+		# 	frame_tmp.pack(side="top")
+		# 	self.create_entry_label(x, "Super long name that really really doesn't matter", frame_tmp)
+		create_right_labels(self, frame_bot_right)
 
 	def create_bottom_stats(self):
 		frame_bottom = tk.Frame(self)
@@ -97,16 +104,17 @@ class Application(tk.Frame):
 	def create_combo_label(self, label_name, combo_id, frame, is_IRIS = False):
 		label_computer = tk.Label(frame, text=label_name, width=20, anchor="w")
 		label_computer.pack(side="top")
-		combo_computer = ttk.Combobox(frame, values=get_subclasses(combo_id, is_IRIS))
-		combo_computer.current(1)
-		combo_computer.pack(side="top")
+		self.combo_computer = ttk.Combobox(frame, values=get_subclasses_onelevel(combo_id))
+		self.combo_computer.current(1)
+		self.combo_computer.pack(side="top")
+		self.combo_computer.bind("<<ComboboxSelected>>", self.combo_selected)
 
 	def create_entry_label(self, label_name, entry_text, frame):
 		label_name = tk.Label(frame, text=label_name, width=10, anchor="w")
 		label_name.pack(side="left", pady=8)
 		label_val = tk.Label(frame, text=entry_text, width=22, anchor="e", wraplength=120)
 		label_val.pack(side="left")
-
+	
 	#####
 	# CALLBACKS
 	#####
@@ -116,11 +124,40 @@ class Application(tk.Frame):
 	def search(self):
 		print("searching")
 
-	def toggle_geom(self,event):
+	def toggle_geom(self, event):
 		geom=self.master.winfo_geometry()
 		print(geom,self._geom)
 		self.master.geometry(self._geom)
 		self._geom=geom
+
+	def combo_selected(self, event):
+		selected_piece = self.combo_computer.get()
+		sub_pieces = get_subclasses_recur(selected_piece)
+		# now delete everything currently in the listbox
+		self.listbox.delete(0, tk.END)
+		# now add the subpieces
+		cur_parent = None
+		last_parent = None
+		for idx, elem in enumerate(sub_pieces):
+			cur_parent = get_obo_elem(elem)
+			if idx != 0:
+				self.listbox.insert("end", "{:>15s}".format(elem))
+			else:
+				self.listbox.insert("end", elem)
+			last_parent = cur_parent
+		
+	def lb_onselect(self, event):
+		w = event.widget
+		index = int(w.curselection()[0])
+		value = w.get(index).lstrip().rstrip()
+		# Place a randomly selected individual into the build
+		indivs = get_indivs(value)
+		if len(indivs) > 0:
+			obo_elem = random.sample(indivs, 1)[0]
+			possib_parents = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
+			replace_right_label(self, obo_elem, possib_parents)
+		else:
+			print("Error: no individuals for this class")
 
 
 
@@ -128,6 +165,7 @@ class Application(tk.Frame):
 root = tk.Tk()
 root.title("PC Part Picker")
 root.attributes('-fullscreen', True)
+# root.geometry("1500x1000")
 # root.bind('<Escape>',lambda e: root.destroy())
 root.bind('<Escape>',lambda e: root.iconify())
 root.wm_state('iconic')
