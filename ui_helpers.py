@@ -26,7 +26,7 @@ def replace_right_label(self, obo_elem, possib_parents):
     self.label_val_storage['text'] = obo_elem.name
 
 def recur_find_parent(self, cur_parent, possib_parents):
-  if cur_parent is None:
+  if cur_parent is None or cur_parent == []:
     return None
   else:
     for new_parent in cur_parent.is_a: # is one of our direct parents a match?
@@ -34,7 +34,7 @@ def recur_find_parent(self, cur_parent, possib_parents):
       for par in possib_parents:
         if par in new_parent_name: # we have a match
           return par
-      return recur_find_parent(self, new_parent, possib_parents) # keep going
+    return recur_find_parent(self, new_parent, possib_parents) # keep going
   
 
 # i would do this simpler but each label val needs its own reference for text replacement...

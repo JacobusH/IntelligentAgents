@@ -151,9 +151,13 @@ class Application(tk.Frame):
 		index = int(w.curselection()[0])
 		value = w.get(index).lstrip().rstrip()
 		# Place a randomly selected individual into the build
-		obo_elem = random.sample(get_indivs(value), 1)[0]
-		possib_parents = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
-		replace_right_label(self, obo_elem, possib_parents)
+		indivs = get_indivs(value)
+		if len(indivs) > 0:
+			obo_elem = random.sample(indivs, 1)[0]
+			possib_parents = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
+			replace_right_label(self, obo_elem, possib_parents)
+		else:
+			print("Error: no individuals for this class")
 
 
 

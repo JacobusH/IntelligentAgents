@@ -5,7 +5,9 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xml:base="urn:absolute:IA"
          xmlns="urn:absolute:IA#"
-         xmlns:xpUF="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#">
+         xmlns:xpUF="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#"
+         xmlns:xpUF2="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/"
+         xmlns:xpUF3="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#SA400S37/">
 
 <owl:Ontology rdf:about="urn:absolute:IA"/>
 
@@ -30,6 +32,16 @@
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>CPU</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts</rdfs:label>
+</owl:Class>
+
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUCores">
   <rdfs:range>
     <owl:Restriction>
@@ -40,11 +52,6 @@
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUProperties"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>CPU</rdfs:label>
-</owl:Class>
-
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUSocket">
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MotherBoardProperties"/>
 </owl:ObjectProperty>
@@ -53,6 +60,11 @@
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard"/>
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>Motherboard</rdfs:label>
+</owl:Class>
 
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUSpeed">
   <rdfs:range>
@@ -71,6 +83,10 @@
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasSocket"/>
 </owl:ObjectProperty>
 
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUSockets">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Sockets"/>
+</owl:Class>
+
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasSocket">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
   <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Interfaces"/>
@@ -78,20 +94,17 @@
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>Motherboard</rdfs:label>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Sockets">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Interfaces"/>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUSockets">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Sockets"/>
-</owl:Class>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Interfaces"/>
 
-<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasHardDrive">
+<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasInterface">
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasInterface">
+<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasHardDrive">
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
@@ -166,6 +179,47 @@
   <rdfs:label>Peripherals</rdfs:label>
 </owl:Class>
 
+<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#hasPart">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>Cooling</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Input">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R6KTEriqId00kTIZki5blq"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>Memory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Output">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R6KTEriqId00kTIZki5blq"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>Case</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>PSU</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+  <rdfs:label>GPU</rdfs:label>
+</owl:Class>
+
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasPrice">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Computer"/>
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R6KTEriqId00kTIZki5blq"/>
@@ -179,11 +233,6 @@
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts</rdfs:label>
-</owl:Class>
-
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HasRamSlots">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard"/>
   <rdfs:range>
@@ -195,8 +244,6 @@
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Interfaces"/>
-
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MaxRAM">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU"/>
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU"/>
@@ -205,11 +252,6 @@
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUProperties"/>
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MotherBoardProperties"/>
 </owl:ObjectProperty>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>GPU</rdfs:label>
-</owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities">
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
@@ -247,6 +289,78 @@
   </rdfs:subClassOf>
 </owl:Class>
 
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR4">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HighMemory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
+      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MediumMemory"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:label>HighMemory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MediumMemory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
+      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowMemory"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:label>MediumMemory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#UltraHighMemory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
+      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HighMemory"/>
+      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:label>UltraHighMemory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
+  <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:label>containsMemory</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowMemory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
+      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#VeryLowMemory"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:label>LowMemory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#VeryLowMemory">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
+  <rdfs:label>VeryLowMemory</rdfs:label>
+</owl:Class>
+
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R8RsqAQ6OXZTVUrpArWPfeL">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Computer"/>
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -272,11 +386,6 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasMemory</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>Memory</rdfs:label>
-</owl:Class>
-
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R9Yu50pH6f8K5pEqGpHYO9B">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU"/>
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Speakers"/>
@@ -296,16 +405,6 @@
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimension</rdfs:label>
 </owl:ObjectProperty>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>Case</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>Cooling</rdfs:label>
-</owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Monitor">
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Output"/>
@@ -381,13 +480,6 @@
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MotherBoardProperties"/>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI">
-  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
-  <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
-  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-  <rdfs:label>containsMemory</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RkD2Xwtw4w9Npj86LHhlxu">
   <rdfs:domain rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Computer"/>
   <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -396,10 +488,6 @@
 
 <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#TDP">
   <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPUProperties"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#hasPart">
-  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
 </owl:ObjectProperty>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#AM">
@@ -463,18 +551,6 @@
       </owl:intersectionOf>
     </owl:Class>
   </rdfs:subClassOf>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#UltraHighMemory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
-  <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
-      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HighMemory"/>
-      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-    </owl:Restriction>
-  </owl:equivalentClass>
-  <rdfs:label>UltraHighMemory</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI">
@@ -555,8 +631,9 @@
   <rdfs:label>MediumStorage</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowStorage">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
+  <rdfs:label>LowStorage</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CMV16GX4M1A2133C15">
@@ -588,20 +665,16 @@
   </rdfs:subClassOf>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR4">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds"/>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CaseBrands">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case"/>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HighMemory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
-  <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
-      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MediumMemory"/>
-      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-    </owl:Restriction>
-  </owl:equivalentClass>
-  <rdfs:label>HighMemory</rdfs:label>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryBrands">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSUBrands">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CMZ8GX3M1A1600C10">
@@ -618,26 +691,6 @@
       </owl:intersectionOf>
     </owl:Class>
   </rdfs:subClassOf>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MediumMemory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
-  <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
-      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowMemory"/>
-      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-    </owl:Restriction>
-  </owl:equivalentClass>
-  <rdfs:label>MediumMemory</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Sockets">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Interfaces"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CT25664AA800">
@@ -673,9 +726,8 @@
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds"/>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#VeryLowMemory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
-  <rdfs:label>VeryLowMemory</rdfs:label>
+<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#StorageBrands">
+  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CT25664BC1339">
@@ -716,23 +768,6 @@
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CaseBrands">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Input">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R6KTEriqId00kTIZki5blq"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Output">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R6KTEriqId00kTIZki5blq"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RDpBs6DXJfwjWljvKnjFFK7"/>
-  <rdfs:label>PSU</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CoolerMaster">
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Brands"/>
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CoolingBrands"/>
@@ -753,14 +788,6 @@
   <rdfs:label>Cooler Master - Hyper 212</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryBrands">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSUBrands">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU"/>
-</owl:Class>
-
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Corsair_200R">
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case"/>
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Corsair"/>
@@ -770,14 +797,6 @@
       <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">52</owl:cardinality>
     </owl:Restriction>
   </rdfs:subClassOf>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#StorageBrands">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemorySpeeds">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#EVGA">
@@ -834,18 +853,6 @@
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#G.Skill">
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Brands"/>
   <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryBrands"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowMemory">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MemoryQuantities"/>
-  <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#RjwtaqfWXyvBWjMPPZx9tI"/>
-      <owl:onClass rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#VeryLowMemory"/>
-      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-    </owl:Restriction>
-  </owl:equivalentClass>
-  <rdfs:label>LowMemory</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#F4-2133C15S-4GIS">
@@ -1031,11 +1038,6 @@
     </owl:Restriction>
   </rdfs:subClassOf>
   <rdfs:label>LowEnd</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#LowStorage">
-  <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
-  <rdfs:label>LowStorage</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#M386B4G70DM0-CMA">
@@ -1299,6 +1301,198 @@
 <xpUF:Corsair_200R rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#indiv_case_3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </xpUF:Corsair_200R>
+
+<xpUF:CPU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CPU>
+
+<xpUF:CPU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CPU>
+
+<xpUF:Case rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Case>
+
+<xpUF:Case rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Case>
+
+<xpUF:Cooling rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Cooling>
+
+<xpUF:Cooling rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Cooling>
+
+<xpUF:GPU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:GPU>
+
+<xpUF:GPU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:GPU>
+
+<xpUF:Memory rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Memory>
+
+<xpUF:Memory rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Memory>
+
+<xpUF:Motherboard rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Mobo1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Motherboard>
+
+<xpUF:Motherboard rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Mobo2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Motherboard>
+
+<xpUF:PSU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:PSU>
+
+<xpUF:PSU rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:PSU>
+
+<xpUF:Storage rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Storage>
+
+<xpUF:Storage rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Storage>
+
+<xpUF:AMD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#AMD1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:AMD>
+
+<xpUF:INTEL rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#INTEL1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:INTEL>
+
+<xpUF:MSI_GTX_1050_Ti_GAMING_X_4G rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI_GTX_1050_Ti_GAMING_X_4G_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI_GTX_1050_Ti_GAMING_X_4G>
+
+<xpUF:MSI_GTX_1050_Ti_GAMING_X_4G rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI_GTX_1050_Ti_GAMING_X_4G_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI_GTX_1050_Ti_GAMING_X_4G>
+
+<xpUF:MSI rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI>
+
+<xpUF:MSI rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI>
+
+<xpUF:MSI_RX_580_ARMOR_8G_OC rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI_RX_580_ARMOR_8G_OC_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI_RX_580_ARMOR_8G_OC>
+
+<xpUF:MSI_RX_580_ARMOR_8G_OC rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI_RX_580_ARMOR_8G_OC_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:MSI_RX_580_ARMOR_8G_OC>
+
+<xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler>
+
+<xpUF:CoolerMaster rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CoolerMaster_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CoolerMaster>
+
+<xpUF:CoolerMaster rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CoolerMaster_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CoolerMaster>
+
+<xpUF:DDR3 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:DDR3>
+
+<xpUF:DDR3 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:DDR3>
+
+<xpUF:DDR4 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR4_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:DDR4>
+
+<xpUF:DDR2 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR2_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:DDR2>
+
+<xpUF:DDR2 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR2_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:DDR2>
+
+<xpUF:G.Skill rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#G.Skill_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:G.Skill>
+
+<xpUF:G.Skill rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#G.Skill_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:G.Skill>
+
+<xpUF:SSD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#SSD_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:SSD>
+
+<xpUF:SSD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#SSD_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:SSD>
+
+<xpUF:HDD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HDD_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:HDD>
+
+<xpUF:HDD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#HDD_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:HDD>
+
+<xpUF:CT500MX500SSD1 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CT500MX500SSD1_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CT500MX500SSD1>
+
+<xpUF:CT500MX500SSD1 rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CT500MX500SSD1_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:CT500MX500SSD1>
+
+<xpUF:Western_Digital_-_AV-GP_500_GB rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Western_Digital_-_AV-GP_500_GB_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Western_Digital_-_AV-GP_500_GB>
+
+<xpUF:Western_Digital_-_AV-GP_500_GB rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Western_Digital_-_AV-GP_500_GB_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Western_Digital_-_AV-GP_500_GB>
+
+<xpUF:EVGA_02G-P4-6150-KR rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#EVGA_02G-P4-6150-KR_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:EVGA_02G-P4-6150-KR>
+
+<xpUF:EVGA_02G-P4-6150-KR rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#EVGA_02G-P4-6150-KR_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:EVGA_02G-P4-6150-KR>
+
+<xpUF:EVGA_04G-P4-6251-KR rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#EVGA_04G-P4-6251-KR_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:EVGA_04G-P4-6251-KR>
+
+<xpUF:EVGA_04G-P4-6251-KR rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#EVGA_04G-P4-6251-KR_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:EVGA_04G-P4-6251-KR>
+
+<xpUF:Gigabyte_GV-N1050OC-2GD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Gigabyte_GV-N1050OC-2GD_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Gigabyte_GV-N1050OC-2GD>
+
+<xpUF:Gigabyte_GV-N1050OC-2GD rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Gigabyte_GV-N1050OC-2GD_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</xpUF:Gigabyte_GV-N1050OC-2GD>
 
 <owl:AllDisjointClasses>
   <owl:members rdf:parseType="Collection">
