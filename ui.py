@@ -44,7 +44,7 @@ class Application(tk.Frame):
 		self.cur_cost_label.pack(side="left")
 		self.cur_cost_val = tk.Entry(frame_top, width=10)
 		self.cur_cost_val.pack(side="left", padx=10, pady=10)
-		self.price_btn = tk.Button(frame_top, text="Set Price", fg="black", command=self.search)
+		self.price_btn = tk.Button(frame_top, text="Set Price", fg="black", command=self.set_price)
 		self.price_btn.pack(side="right")
 
 	# MAKE LEFT COLUMN
@@ -82,12 +82,17 @@ class Application(tk.Frame):
 		frame_bot_right = tk.Frame(frame_middle, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_right.pack(side="left", fill="none", expand=True, padx=20, pady=20)
 
-		# we need to have named labels for the replace....
-		# for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts
-		# 	frame_tmp = tk.Frame(frame_bot_right)
-		# 	frame_tmp.pack(side="top")
-		# 	self.create_entry_label(x, "Super long name that really really doesn't matter", frame_tmp)
+		# make the right labels
 		create_right_labels(self, frame_bot_right)
+		# make the 'Add Computer' button
+		button_add = tk.Button(frame_bot_right, text="Add Computer", command=self.save_computer)
+		button_add.pack(side="left")
+		# and the text box to name the new computer build
+		self.comp_name = tk.StringVar()
+		comp_entry = tk.Entry(frame_bot_right, textvariable=self.comp_name)
+		comp_entry.pack(side="left")
+		self.comp_name.set("My New Computer")
+		
 
 	def create_bottom_stats(self):
 		frame_bottom = tk.Frame(self)
@@ -118,11 +123,11 @@ class Application(tk.Frame):
 	#####
 	# CALLBACKS
 	#####
-	def say_hi(self):
-		print("hi there, everyone!")
+	def set_price(self, event):
+		print("hallo")
 
-	def search(self):
-		print("searching")
+	def save_computer(self):
+		compName = self.comp_name.get()
 
 	def toggle_geom(self, event):
 		geom=self.master.winfo_geometry()

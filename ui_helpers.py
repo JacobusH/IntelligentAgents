@@ -96,3 +96,9 @@ def create_right_labels(self, frame):
 		label_name_storage.pack(side="left", pady=8)
 		self.label_val_storage = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_storage.pack(side="left")
+
+### if we didn't need named label vals could use this...
+# for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts
+# 	frame_tmp = tk.Frame(frame_bot_right)
+# 	frame_tmp.pack(side="top")
+# 	self.create_entry_label(x, "Super long name that really really doesn't matter", frame_tmp)
