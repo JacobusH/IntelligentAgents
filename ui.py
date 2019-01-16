@@ -76,7 +76,7 @@ class Application(tk.Frame):
 		# make scrollbar & listbox
 		self.scrollbar = Scrollbar(frame_scrollbar)
 		self.scrollbar.pack(side="right", fill="y")
-		self.listbox = Listbox(frame_scrollbar, yscrollcommand=self.scrollbar.set, width=math.floor((rootWidth / 3) - 100 ), height=math.floor((rootHeight / 3) - 100 ))
+		self.listbox = Listbox(frame_scrollbar, yscrollcommand=self.scrollbar.set, width=math.floor((rootWidth / 5) - 100 ), height=math.floor((rootHeight / 3) - 100 ))
 		self.listbox.bind('<<ListboxSelect>>', self.lb_onselect)
 		for i in range(1000):
 			self.listbox.insert("end", str(i))
