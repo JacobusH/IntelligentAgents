@@ -25,7 +25,7 @@ class Application(tk.Frame):
 		# init top frame
 		self.create_top_parameters()
 		# init middle frame
-		frame_middle = tk.Frame(self, height=(rootHeight / 3) - 20, width=(rootWidth / 3) - 20, background = "pink")
+		frame_middle = tk.Frame(self, height=(rootHeight / 3) - 20, width=(rootWidth / 3) - 20)
 		frame_middle.pack(side="bottom")
 		self.create_mid_left_onto(frame_middle)
 		self.create_mid_results(frame_middle)
@@ -58,13 +58,20 @@ class Application(tk.Frame):
 		frame_bot_left = tk.Frame(frame_middle, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_left.pack(side="left", fill="none", expand=True, padx=20, pady=20)
 		### Computer | subclasses
-		self.create_combo_label("Pre-Built Computer", 'Computer', frame_bot_left)
-		### Memory | subclasses
-		self.create_combo_label("Memory", "Memory", frame_bot_left)
-		### Parts | subclasses
-		self.create_combo_label("Parts", "RDpBs6DXJfwjWljvKnjFFK7", frame_bot_left)
-		### Peripherals | subclasses
-		# self.create_combo_label("Peripherals", "R6KTEriqId00kTIZki5blq", frame_bot_left)
+		# self.create_combo_label("Pre-Built Computer", 'Computer', frame_bot_left)
+		# ### Memory | subclasses
+		# self.create_combo_label("Memory", "Memory", frame_bot_left)
+		# ### Parts | subclasses
+		# self.create_combo_label("Parts", "RDpBs6DXJfwjWljvKnjFFK7", frame_bot_left)
+		# ### Peripherals | subclasses
+		# # self.create_combo_label("Peripherals", "R6KTEriqId00kTIZki5blq", frame_bot_left)
+		
+		for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts
+			frame_tmp = tk.Frame(frame_bot_left)
+			frame_tmp.pack(side="top")
+			tmp_btn = tk.Button(frame_tmp, text=x, fg="black")
+			tmp_btn.config(pady=2, width=17, height=2, command= lambda t=x, btn = tmp_btn: self.part_clicked(t, tmp_btn))
+			tmp_btn.pack(side="top")
 
 	# MAKE MIDDLE COLUMN
 	def create_mid_results(self, frame_middle):
@@ -78,8 +85,8 @@ class Application(tk.Frame):
 		self.scrollbar.pack(side="right", fill="y")
 		self.listbox = Listbox(frame_scrollbar, yscrollcommand=self.scrollbar.set, width=math.floor((rootWidth / 5) - 100 ), height=math.floor((rootHeight / 3) - 100 ))
 		self.listbox.bind('<<ListboxSelect>>', self.lb_onselect)
-		for i in range(1000):
-			self.listbox.insert("end", str(i))
+		# for i in range(1000):
+		# 	self.listbox.insert("end", str(i))
 		self.listbox.pack(side="left", fill="both")
 		self.scrollbar.config(command=self.listbox.yview)
 
@@ -121,6 +128,22 @@ class Application(tk.Frame):
 	#####
 	def set_price(self, event):
 		print("hallo")
+
+	def part_clicked(self, text, btn):
+		selected_piece = text
+		sub_pieces = get_subclasses_recur(selected_piece)
+		# now delete everything currently in the listbox
+		self.listbox.delete(0, tk.END)
+		# now add the subpieces
+		cur_parent = None
+		last_parent = None
+		for idx, elem in enumerate(sub_pieces):
+			cur_parent = get_obo_elem(elem)
+			if idx != 0:
+				self.listbox.insert("end", "{:>15s}".format(elem))
+			else:
+				self.listbox.insert("end", elem)
+			last_parent = cur_parent
 
 	def save_computer(self):
 		parts = assemble_parts(self)
