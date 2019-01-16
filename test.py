@@ -6,7 +6,7 @@ from owlready2 import *
 from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel
 
 
-onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 # sync_reasoner()
 

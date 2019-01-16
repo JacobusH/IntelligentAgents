@@ -9,9 +9,9 @@ is_debug = True
 def get_label(x):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	is_str = isinstance(x, str)
@@ -32,9 +32,9 @@ def get_label(x):
 def get_classes():
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	sync_reasoner()
 
@@ -57,9 +57,9 @@ def get_classes():
 def get_subclasses_recur(class_id, is_IRIS = False):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -78,9 +78,9 @@ def get_subclasses_recur(class_id, is_IRIS = False):
 def get_subclasses_onelevel(class_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -97,9 +97,9 @@ def get_subclasses_onelevel(class_id):
 def get_indivs(class_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -112,9 +112,9 @@ def get_indivs(class_id):
 def get_obo_elem(elem_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	return obo[elem_id]
@@ -122,9 +122,9 @@ def get_obo_elem(elem_id):
 def save_computer(comp_name, parts):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
 	else:
-		onto = get_ontology("James25.owl").load()
+		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# make the computer
 	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = [])

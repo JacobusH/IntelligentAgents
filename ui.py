@@ -145,7 +145,7 @@ class Application(tk.Frame):
 
 	def combo_selected(self, event):
 		selected_piece = self.combo_computer.get()
-		sub_pieces = get_subclasses_recur(selected_piece, obo, onto)
+		sub_pieces = get_subclasses_recur(selected_piece)
 		# now delete everything currently in the listbox
 		self.listbox.delete(0, tk.END)
 		# now add the subpieces
