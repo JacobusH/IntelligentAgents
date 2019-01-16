@@ -131,6 +131,33 @@ def save_computer(comp_name, parts):
 	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = parts)
 	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl")
 
+def recur_find_parent(cur_parent, possib_parents):
+	if cur_parent is None or cur_parent == []:
+		return None
+	else:
+		for new_parent in cur_parent.is_a: # is one of our direct parents a match?
+			new_parent_name = new_parent.name
+			for par in possib_parents:
+				if par in new_parent_name: # we have a match
+					return par
+		return recur_find_parent(new_parent, possib_parents) # keep going
+
+def find_missing_parts(comp_name):
+	onto = None
+	if is_debug:
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
+	else:
+		onto = get_ontology("James27.owl").load()
+	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
+	all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
+	comp_parts = onto.search(iri = "*" + comp_name)[0].hasPart
+	comp_has = []
+	for part in comp_parts:
+		comp_has.append(recur_find_parent(part, all_parts))
+	# now get the diff 
+	comp_needs = list(set(all_parts) - set(comp_has))
+	return comp_needs
+
 
 
 

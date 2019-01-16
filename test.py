@@ -3,7 +3,8 @@ import os
 import math
 import pprint
 from owlready2 import *
-from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem
+from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, find_missing_parts
+from ui_helpers import recur_find_parent, recur_find_parent_noself
 
 
 onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
@@ -47,20 +48,32 @@ obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4h
 ### working get individuals
 # for i in obo.Corsair_200R.instances(): # has direct indivs
 # 	print(i)
-obo_parts = []
 # for i in obo.Case.instances(): # only has bottom level indivs
 # 	obo_parts.append(i)
 
-test = onto.search(iri = "*Corsair_200R_1")
+### working add computer to onto with parts
+# obo_parts = []
+# test = onto.search(iri = "*Corsair_200R_1")
+# parts = ['Corsair_200R_1', "'Intel_-_Core_i7-950'_2", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1']
+# for x in parts:
+# 	obo_part = onto.search(iri = "*" + x)
+# 	if len(obo_part) > 0:
+# 		obo_parts.append(obo_part[0])
+# new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
+# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl")
 
-parts = ['Corsair_200R_1', "'Intel_-_Core_i7-950'_2", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1']
-for x in parts:
-	obo_part = onto.search(iri = "*" + x)
-	if len(obo_part) > 0:
-		obo_parts.append(obo_part[0])
-new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
-onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl")
-
+### working find missing parts
+# all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
+# comp_name = 'Obo_comp_1'
+# comp_parts = onto.search(iri = "*" + comp_name)[0].hasPart
+# comp_has = []
+# for part in comp_parts:
+# 	comp_has.append(recur_find_parent_noself(part, all_parts))
+# # now get the diff 
+# comp_needs = list(set(all_parts) - set(comp_has))
+	
+bleh = find_missing_parts('Obo_comp_1')
+tmp = 'tmp'
 
 
 # ['MotherboardBrands', 'MSI', 'MSI_GTX_1050_Ti_GAMING_X_4G', 'MSI_RX_580_ARMOR_8G_OC']

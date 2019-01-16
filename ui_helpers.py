@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
-from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs
+from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, recur_find_parent
 import math
 import random
 
@@ -35,7 +35,7 @@ def assemble_parts(self):
 
 def replace_right_label(self, obo_elem, possib_parents):
   # find what parent this elem belongs to
-  le_parent = recur_find_parent(self, obo_elem, possib_parents)
+  le_parent = recur_find_parent(obo_elem, possib_parents)
   # and then place the element as that parent's value in the build section
   if le_parent == "Case":
     self.label_val_case['text'] = obo_elem.name
@@ -53,18 +53,6 @@ def replace_right_label(self, obo_elem, possib_parents):
     self.label_val_psu['text'] = obo_elem.name
   elif le_parent == "Storage":
     self.label_val_storage['text'] = obo_elem.name
-
-def recur_find_parent(self, cur_parent, possib_parents):
-  if cur_parent is None or cur_parent == []:
-    return None
-  else:
-    for new_parent in cur_parent.is_a: # is one of our direct parents a match?
-      new_parent_name = new_parent.name
-      for par in possib_parents:
-        if par in new_parent_name: # we have a match
-          return par
-    return recur_find_parent(self, new_parent, possib_parents) # keep going
-  
 
 # i would do this simpler but each label val needs its own reference for text replacement...
 def create_right_labels(self, frame):
