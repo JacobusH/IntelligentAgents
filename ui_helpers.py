@@ -6,17 +6,32 @@ import random
 
 def assemble_parts(self):
 	parts = []
-	compName = self.comp_name.get()
-	case = self.label_val_case['text']
-	cpu = self.label_val_cpu['text']
-	cooling = self.label_val_cooling['text']
-	gpu = self.label_val_gpu['text']
-	mem = self.label_val_mem['text']
-	mobo = self.label_val_mobo['text']
-	psu = self.label_val_psu['text']
-	storage = self.label_val_storage['text']
+	compName 	= self.comp_name.get()
+	case 			= self.label_val_case['text']
+	cpu 			= self.label_val_cpu['text']
+	cooling 	= self.label_val_cooling['text']
+	gpu 			= self.label_val_gpu['text']
+	mem 			= self.label_val_mem['text']
+	mobo 			= self.label_val_mobo['text']
+	psu 			= self.label_val_psu['text']
+	storage 	= self.label_val_storage['text']
 	if case != "No Selection":
 		parts.append(case)
+	if cpu != "No Selection":
+		parts.append(cpu)
+	if cooling != "No Selection":
+		parts.append(cooling)
+	if gpu != "No Selection":
+		parts.append(gpu)
+	if mem != "No Selection":
+		parts.append(mem)
+	if mobo != "No Selection":
+		parts.append(mobo)
+	if psu != "No Selection":
+		parts.append(psu)
+	if storage != "No Selection":
+		parts.append(storage)
+	return parts
 
 def replace_right_label(self, obo_elem, possib_parents):
   # find what parent this elem belongs to

@@ -3,7 +3,7 @@ import os
 import math
 import pprint
 from owlready2 import *
-from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel
+from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem
 
 
 onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl").load()
@@ -47,8 +47,19 @@ obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4h
 ### working get individuals
 # for i in obo.Corsair_200R.instances(): # has direct indivs
 # 	print(i)
-for i in obo.Case.instances(): # only has bottom level indivs
-	print(i)
+obo_parts = []
+# for i in obo.Case.instances(): # only has bottom level indivs
+# 	obo_parts.append(i)
+
+test = onto.search(iri = "*Corsair_200R_1")
+
+parts = ['Corsair_200R_1', "'Intel_-_Core_i7-950'_2", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1']
+for x in parts:
+	obo_part = onto.search(iri = "*" + x)
+	if len(obo_part) > 0:
+		obo_parts.append(obo_part[0])
+new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
+onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl")
 
 
 

@@ -6,6 +6,7 @@ from owlready2 import *
 
 is_debug = True
 
+
 def get_label(x):
 	onto = None
 	if is_debug:
@@ -127,8 +128,8 @@ def save_computer(comp_name, parts):
 		onto = get_ontology("James27.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# make the computer
-	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = [])
-	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James25.owl")
+	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = parts)
+	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\James27.owl")
 
 
 

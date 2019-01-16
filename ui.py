@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
 from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, save_computer
-from ui_helpers import create_right_labels, replace_right_label
+from ui_helpers import create_right_labels, replace_right_label, assemble_parts
 import math
 import random
 from owlready2 import *
@@ -133,9 +133,8 @@ class Application(tk.Frame):
 		print("hallo")
 
 	def save_computer(self):
-		
-
-		save_computer(compName, parts)
+		parts = assemble_parts(self)
+		save_computer(self.comp_name.get(), parts)
 
 	def toggle_geom(self, event):
 		geom=self.master.winfo_geometry()
@@ -161,16 +160,17 @@ class Application(tk.Frame):
 		
 	def lb_onselect(self, event):
 		w = event.widget
-		index = int(w.curselection()[0])
-		value = w.get(index).lstrip().rstrip()
-		# Place a randomly selected individual into the build
-		indivs = get_indivs(value)
-		if len(indivs) > 0:
-			obo_elem = random.sample(indivs, 1)[0]
-			possib_parents = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
-			replace_right_label(self, obo_elem, possib_parents)
-		else:
-			print("Error: no individuals for this class")
+		if w.curselection(): # we have an actual selection
+			index = int(w.curselection()[0])
+			value = w.get(index).lstrip().rstrip()
+			# Place a randomly selected individual into the build
+			indivs = get_indivs(value)
+			if len(indivs) > 0:
+				obo_elem = random.sample(indivs, 1)[0]
+				possib_parents = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
+				replace_right_label(self, obo_elem, possib_parents)
+			else:
+				print("Error: no individuals for this class")
 
 
 
