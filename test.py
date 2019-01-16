@@ -7,7 +7,7 @@ from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel,
 from ui_helpers import recur_find_parent
 
 
-onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Bart1.owl").load()
+onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared1.owl").load()
 obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 # sync_reasoner()
 
@@ -48,8 +48,8 @@ obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4h
 ### working get individuals
 # for i in obo.Corsair_200R.instances(): # has direct indivs
 # 	print(i)
-# for i in obo.Case.instances(): # only has bottom level indivs
-# 	obo_parts.append(i)
+# for i in obo.CPU.instances(): # only has bottom level indivs
+# 	print(i)
 
 ### working add computer to onto with parts
 # obo_parts = []
@@ -60,7 +60,7 @@ obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4h
 # 	if len(obo_part) > 0:
 # 		obo_parts.append(obo_part[0])
 # new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
-# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Bart1.owl")
+# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared1.owl")
 
 ### working find missing parts
 # all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
@@ -71,9 +71,6 @@ obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4h
 # 	comp_has.append(recur_find_parent_noself(part, all_parts))
 # # now get the diff 
 # comp_needs = list(set(all_parts) - set(comp_has))
-	
-bleh = onto.search(iri = "*Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler")
-tmp = 'tmp'
 
 
 # ['MotherboardBrands', 'MSI', 'MSI_GTX_1050_Ti_GAMING_X_4G', 'MSI_RX_580_ARMOR_8G_OC']

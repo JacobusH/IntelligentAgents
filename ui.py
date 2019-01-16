@@ -87,19 +87,9 @@ class Application(tk.Frame):
 	def create_mid_right_build(self, frame_middle):
 		frame_bot_right = tk.Frame(frame_middle, height=frame_colHeight, width=frame_colWidth)
 		frame_bot_right.pack(side="left", fill="none", expand=True, padx=20, pady=20)
-
-		# make the right labels
+		# make the right labels and button
 		create_right_labels(self, frame_bot_right)
-		# make the 'Add Computer' button
-		button_add = tk.Button(frame_bot_right, text="Add Computer", command=self.save_computer)
-		button_add.pack(side="left")
-		# and the text box to name the new computer build
-		self.comp_name = tk.StringVar()
-		comp_entry = tk.Entry(frame_bot_right, textvariable=self.comp_name)
-		comp_entry.pack(side="left")
-		self.comp_name.set("My New Computer")
 		
-
 	def create_bottom_stats(self):
 		frame_bottom = tk.Frame(self)
 		frame_bottom.pack(side="bottom")

@@ -113,6 +113,23 @@ def create_right_labels(self, frame):
 		label_name_storage.pack(side="left", pady=8)
 		self.label_val_storage = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_storage.pack(side="left")
+		### 'Add Computer' button
+		frame_tmp = tk.Frame(frame)
+		frame_tmp.pack(side="top")
+		button_add = tk.Button(frame_tmp, text="Add Computer", command=self.save_computer)
+		button_add.pack(side="left")
+		### Text box to name the new computer build
+		self.comp_name = tk.StringVar()
+		comp_entry = tk.Entry(frame_tmp, textvariable=self.comp_name)
+		comp_entry.pack(side="left")
+		self.comp_name.set("My New Computer")
+		### Suggested part
+		frame_tmp = tk.Frame(frame)
+		frame_tmp.pack(side="top")
+		self.label_sugg = tk.Label(frame_tmp, text="test", width=10, anchor="w", fg="green", font=("Helvetica", 22))
+		self.label_sugg.pack(side="left", pady=8)
+		# in order to set this label use the code below
+		# self.label_sugg['text'] = "The Suggested Component Name"
 
 ### if we didn't need named label vals could use this...
 # for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts
