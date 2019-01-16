@@ -4,6 +4,20 @@ from partPicker import get_classes, get_subclasses_recur, get_subclasses_oneleve
 import math
 import random
 
+def recur_indent(self, cur_parent_text, sub_pieces, depth = 0, indent = 0):
+	# find the item which has text as it's parent
+	direct_children = []
+	for x in sub_pieces:
+		o = get_obo_elem(x)
+		for parent in o.is_a:
+			if not ('&' in str(parent)) and hasattr(parent, 'name') and cur_parent_text == parent.name: # find direct children
+				direct_children.append(x)
+	for child in direct_children:
+		self.listbox.insert("end", "{}{}".format(" "*(indent*depth), child)) # write the piece
+		sub_pieces.remove(child)
+		recur_indent(self, child, sub_pieces, (depth + 1) , (indent + 4))
+	return
+	
 def assemble_parts(self):
 	parts = []
 	compName 	= self.comp_name.get()
