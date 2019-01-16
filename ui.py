@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
 from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, save_computer
-from ui_helpers import create_right_labels, replace_right_label, assemble_parts
+from ui_helpers import create_right_labels, replace_right_label, assemble_parts, recur_indent
 import math
 import random
 from owlready2 import *
@@ -134,16 +134,18 @@ class Application(tk.Frame):
 		sub_pieces = get_subclasses_recur(selected_piece)
 		# now delete everything currently in the listbox
 		self.listbox.delete(0, tk.END)
-		# now add the subpieces
-		cur_parent = None
-		last_parent = None
-		for idx, elem in enumerate(sub_pieces):
-			cur_parent = get_obo_elem(elem)
-			if idx != 0:
-				self.listbox.insert("end", "{:>15s}".format(elem))
-			else:
-				self.listbox.insert("end", elem)
-			last_parent = cur_parent
+		recur_indent(self, text, sub_pieces, 0, 0)
+		
+		####now add the subpieces
+		# cur_parent = None
+		# last_parent = None
+		# for idx, elem in enumerate(sub_pieces):
+		# 	cur_parent = get_obo_elem(elem)
+		# 	if idx != 0:
+		# 		self.listbox.insert("end", "{:>15s}".format(elem))
+		# 	else:
+		# 		self.listbox.insert("end", elem)
+		# 	last_parent = cur_parent
 
 	def save_computer(self):
 		parts = assemble_parts(self)
