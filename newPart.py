@@ -5,8 +5,8 @@ import pprint
 from owlready2 import *
 from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, find_missing_parts
 
-# onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
-# # onto = get_ontology("Shared5.owl").load()
+# onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared6.owl").load()
+# # onto = get_ontology("Shared6.owl").load()
 # obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 
 # Best part: argmin(itemprice + 3* delivery days)
@@ -16,7 +16,7 @@ def find_part(computer, missingClass):
 	# missingClass is the class ID of the missing component
 	# for each type: determine compatibility and utility
 	# sync_reasoner()
-	onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
+	onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared6.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	options = get_indivs(str(missingClass).split(".")[-1])
 

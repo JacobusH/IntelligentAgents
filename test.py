@@ -7,7 +7,7 @@ from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel,
 from ui_helpers import recur_find_parent
 
 
-onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
+onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared6.owl").load()
 obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 # sync_reasoner()
 
@@ -58,7 +58,7 @@ tmp = 'tmp'
 # 	print(i)
 # for i in obo.CPU.instances(): # only has bottom level indivs
 # 	print(i)
-for i in obo.Storage.instances():
+for i in obo.Memory.instances():
 	if not hasattr(i, "delivery_days"):
 		print(i.name)
 	elif len(i.delivery_days) <= 0:
@@ -85,7 +85,7 @@ for i in obo.Storage.instances():
 # 	if len(obo_part) > 0:
 # 		obo_parts.append(obo_part[0])
 # new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
-# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl")
+# onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared6.owl")
 
 ### working find missing parts
 # all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
