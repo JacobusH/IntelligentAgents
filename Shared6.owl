@@ -1,0 +1,2801 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="urn:absolute:IA"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="urn:absolute:IA">
+    <Prefix name="" IRI="urn:absolute:IA"/>
+    <Prefix name="p" IRI="#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xpUF" IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#"/>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:AM"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:AMD"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Asus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:B450_TOMAHAWK"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:BX80601950"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:BigGPU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:BigStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CMV16GX4M1A2133C15"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CMZ8GX3M1A1600C10"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CPU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CPUBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CPUSockets"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CT25664AA800"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CT25664BC1339"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CT500MX500SSD1"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Case"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CaseBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CoolerMaster"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Cooling"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:CoolingBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Corsair"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Corsair_-_CXM_550_W_80"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Crucial"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:DDR2"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:DDR3"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:DDR4"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:EVGA"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:EVGA_02G-P4-6150-KR"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:EVGA_04G-P4-6251-KR"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:F3-1600C11S-4GNT"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:F4-2133C15S-4GIS"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:G.Skill"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:GPUBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Game"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:GamingKeyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:GamingMouse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N1050OC-2GD"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N2070WF3-8GC"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:H81-PLUS"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:HDD"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:HX421S13IB8"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:HX426C16FR16"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Headset"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:HighEnd"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:HighMemory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:INTEL"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Input"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Interfaces"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Kids"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Kingston"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Kingston_A400120GB"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:LGA"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:LowEnd"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:LowMemory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:LowStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:M386B4G70DM0-CMA"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MSI_GTX_1050_Ti_GAMING_X_4G"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MSI_RX_580_ARMOR_8G_OC"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MechanicalKeyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MediumGPU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MediumMemory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MediumStorage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MemorySpeeds"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Microphone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MiddleEnd"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Monitor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Motherboard"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Output"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:PSU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:PSUBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:RBzTQssrN7YghpgZHj6wNZ6"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:RKy0yxxiQv7rfa8Zx0A8Ut"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Samsung"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:SmallGPU"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Sockets"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Speakers"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:StandardMouse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:StorageBrands"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Stylist"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:WesternDigital"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Western_Digital_-_AV-GP_500_GB"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:WirelessKeyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:WirelessMouse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:Work"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUCores"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUSocket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUSpeed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:HasHardDrive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:HasInterface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:HasPrice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:MotherBoardProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:R9Fy0YWKkRNfpQWJmoUWPL5"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:RamSlots"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:RjwtaqfWXyvBWjMPPZx9tI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#delivery_days"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#item_price"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AMDRyzen52600_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CoolerMasterHyper212_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Corsair_200R_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EVGA_02G-P4-6150-KR_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EVGA_04G-P4-6251-KR_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#H81-PLUS_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Headset_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Linda_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MSI_RX_580_ARMOR_8G_OC_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mies_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nikki_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Perry_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rick_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Samsung860Evo250GB_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Western_Digital_-_AV-GP_500_GB_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zoe_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bobs_computer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Price"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="xpUF:BigStorage"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="xpUF:HasHardDrive"/>
+            <Class abbreviatedIRI="xpUF:MediumStorage"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="xpUF:MediumStorage"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="xpUF:HasHardDrive"/>
+            <Class abbreviatedIRI="xpUF:LowStorage"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:AM"/>
+        <Class abbreviatedIRI="xpUF:CPUSockets"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:AMD"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:AMD"/>
+        <Class abbreviatedIRI="xpUF:CPUBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Asus"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Asus"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:GPUBrands"/>
+            <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:B450_TOMAHAWK"/>
+        <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:B450_TOMAHAWK"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:MSI"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:CPUSocket"/>
+                <Class abbreviatedIRI="xpUF:AM"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+                <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="4">
+                <ObjectProperty abbreviatedIRI="xpUF:RamSlots"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:BX80601950"/>
+        <Class abbreviatedIRI="xpUF:INTEL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:BX80601950"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+            <Class abbreviatedIRI="xpUF:LGA"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:BigGPU"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:BigStorage"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CMV16GX4M1A2133C15"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Corsair"/>
+            <Class abbreviatedIRI="xpUF:DDR4"/>
+            <Class abbreviatedIRI="xpUF:HighMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CMZ8GX3M1A1600C10"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Corsair"/>
+            <Class abbreviatedIRI="xpUF:DDR3"/>
+            <Class abbreviatedIRI="xpUF:MediumMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CPU"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CPUBrands"/>
+        <Class abbreviatedIRI="xpUF:CPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CPUSockets"/>
+        <Class abbreviatedIRI="xpUF:Sockets"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CT25664AA800"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Crucial"/>
+            <Class abbreviatedIRI="xpUF:DDR2"/>
+            <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CT25664BC1339"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Crucial"/>
+            <Class abbreviatedIRI="xpUF:DDR3"/>
+            <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CT500MX500SSD1"/>
+        <Class abbreviatedIRI="xpUF:BigStorage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CT500MX500SSD1"/>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CT500MX500SSD1"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Crucial"/>
+            <Class abbreviatedIRI="xpUF:SSD"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Case"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CaseBrands"/>
+        <Class abbreviatedIRI="xpUF:Case"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Cooling"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Input"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Memory"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Output"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Storage"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:CPU"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Case"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:Motherboard"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:PSU"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:GPU"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CoolerMaster"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CoolerMaster"/>
+        <Class abbreviatedIRI="xpUF:CoolingBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+        <Class abbreviatedIRI="xpUF:CoolerMaster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+        <Class abbreviatedIRI="xpUF:CoolingBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Cooling"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:CoolingBrands"/>
+        <Class abbreviatedIRI="xpUF:Cooling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:CaseBrands"/>
+            <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+            <Class abbreviatedIRI="xpUF:PSUBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair_-_CXM_550_W_80"/>
+        <Class abbreviatedIRI="xpUF:Corsair"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair_-_CXM_550_W_80"/>
+        <Class abbreviatedIRI="xpUF:PSUBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+        <Class abbreviatedIRI="xpUF:Case"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+        <Class abbreviatedIRI="xpUF:CaseBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+        <Class abbreviatedIRI="xpUF:Corsair"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Crucial"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Crucial"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:CaseBrands"/>
+            <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+            <Class abbreviatedIRI="xpUF:StorageBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:DDR2"/>
+        <Class abbreviatedIRI="xpUF:MemorySpeeds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:DDR3"/>
+        <Class abbreviatedIRI="xpUF:MemorySpeeds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:DDR4"/>
+        <Class abbreviatedIRI="xpUF:MemorySpeeds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA"/>
+        <Class abbreviatedIRI="xpUF:GPUBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA_02G-P4-6150-KR"/>
+        <Class abbreviatedIRI="xpUF:EVGA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA_02G-P4-6150-KR"/>
+        <Class abbreviatedIRI="xpUF:SmallGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA_04G-P4-6251-KR"/>
+        <Class abbreviatedIRI="xpUF:EVGA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:EVGA_04G-P4-6251-KR"/>
+        <Class abbreviatedIRI="xpUF:MediumGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:F3-1600C11S-4GNT"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:DDR3"/>
+            <Class abbreviatedIRI="xpUF:G.Skill"/>
+            <Class abbreviatedIRI="xpUF:LowMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:F4-2133C15S-4GIS"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:DDR4"/>
+            <Class abbreviatedIRI="xpUF:G.Skill"/>
+            <Class abbreviatedIRI="xpUF:LowMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:G.Skill"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:G.Skill"/>
+        <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:GPUBrands"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Game"/>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Game"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:GPU"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Game"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:SSD"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:GamingKeyboard"/>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:GamingMouse"/>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:GPUBrands"/>
+            <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N1050OC-2GD"/>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N1050OC-2GD"/>
+        <Class abbreviatedIRI="xpUF:SmallGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N2070WF3-8GC"/>
+        <Class abbreviatedIRI="xpUF:BigGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N2070WF3-8GC"/>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:H81-PLUS"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:Asus"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:CPUSocket"/>
+                <Class abbreviatedIRI="xpUF:LGA"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+                <Class abbreviatedIRI="xpUF:MediumMemory"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="2">
+                <ObjectProperty abbreviatedIRI="xpUF:RamSlots"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HDD"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HX421S13IB8"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:DDR4"/>
+            <Class abbreviatedIRI="xpUF:Kingston"/>
+            <Class abbreviatedIRI="xpUF:MediumMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HX426C16FR16"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:DDR4"/>
+            <Class abbreviatedIRI="xpUF:HighMemory"/>
+            <Class abbreviatedIRI="xpUF:Kingston"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Headset"/>
+        <Class abbreviatedIRI="xpUF:Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HighEnd"/>
+        <Class abbreviatedIRI="xpUF:Game"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HighEnd"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:BigStorage"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:MediumStorage"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HighEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:BigGPU"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HighEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:HighMemory"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:INTEL"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:INTEL"/>
+        <Class abbreviatedIRI="xpUF:CPUBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Input"/>
+        <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kids"/>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kids"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:HighMemory"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:LowMemory"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:MediumMemory"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kids"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:MediumStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kingston"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kingston"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+            <Class abbreviatedIRI="xpUF:StorageBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kingston_A400120GB"/>
+        <Class abbreviatedIRI="xpUF:Kingston"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kingston_A400120GB"/>
+        <Class abbreviatedIRI="xpUF:LowStorage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Kingston_A400120GB"/>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:LGA"/>
+        <Class abbreviatedIRI="xpUF:CPUSockets"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:LowEnd"/>
+        <Class abbreviatedIRI="xpUF:Game"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:LowEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:MediumMemory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:LowMemory"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:LowStorage"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:M386B4G70DM0-CMA"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:DDR3"/>
+            <Class abbreviatedIRI="xpUF:Samsung"/>
+            <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:GPUBrands"/>
+            <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI_GTX_1050_Ti_GAMING_X_4G"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI_GTX_1050_Ti_GAMING_X_4G"/>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI_GTX_1050_Ti_GAMING_X_4G"/>
+        <Class abbreviatedIRI="xpUF:MediumGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI_RX_580_ARMOR_8G_OC"/>
+        <Class abbreviatedIRI="xpUF:BigGPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MSI_RX_580_ARMOR_8G_OC"/>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MechanicalKeyboard"/>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MediumGPU"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MediumMemory"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MediumStorage"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MemorySpeeds"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Microphone"/>
+        <Class abbreviatedIRI="xpUF:Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MiddleEnd"/>
+        <Class abbreviatedIRI="xpUF:Game"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MiddleEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:HighMemory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MiddleEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:MediumGPU"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MiddleEnd"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:MediumStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Monitor"/>
+        <Class abbreviatedIRI="xpUF:Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Motherboard"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:MotherboardBrands"/>
+        <Class abbreviatedIRI="xpUF:Motherboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+        <Class abbreviatedIRI="xpUF:Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Output"/>
+        <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:PSU"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:PSUBrands"/>
+        <Class abbreviatedIRI="xpUF:PSU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+        <Class abbreviatedIRI="xpUF:Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RBzTQssrN7YghpgZHj6wNZ6"/>
+        <Class abbreviatedIRI="xpUF:Work"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RBzTQssrN7YghpgZHj6wNZ6"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RBzTQssrN7YghpgZHj6wNZ6"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:SSD"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+        <Class abbreviatedIRI="xpUF:Work"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:HighMemory"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:BigGPU"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:BigStorage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RCE5D4SbLjyyFpNNoKhvdHa"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:Cooling"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RKy0yxxiQv7rfa8Zx0A8Ut"/>
+        <Class abbreviatedIRI="xpUF:Work"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RKy0yxxiQv7rfa8Zx0A8Ut"/>
+        <ObjectComplementOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                    <Class abbreviatedIRI="xpUF:LowMemory"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+                    <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:RKy0yxxiQv7rfa8Zx0A8Ut"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+            <Class abbreviatedIRI="xpUF:SSD"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Samsung"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Samsung"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:MemoryBrands"/>
+            <Class abbreviatedIRI="xpUF:StorageBrands"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:SmallGPU"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Sockets"/>
+        <Class abbreviatedIRI="xpUF:Interfaces"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Speakers"/>
+        <Class abbreviatedIRI="xpUF:Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:StandardMouse"/>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:StorageBrands"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Stylist"/>
+        <Class abbreviatedIRI="xpUF:Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:UltraHighMemory"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:VeryLowMemory"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:WesternDigital"/>
+        <Class abbreviatedIRI="xpUF:Brands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:WesternDigital"/>
+        <Class abbreviatedIRI="xpUF:StorageBrands"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Western_Digital_-_AV-GP_500_GB"/>
+        <Class abbreviatedIRI="xpUF:BigStorage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Western_Digital_-_AV-GP_500_GB"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="xpUF:HDD"/>
+            <Class abbreviatedIRI="xpUF:WesternDigital"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:WirelessKeyboard"/>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:WirelessMouse"/>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:Work"/>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+        <Class abbreviatedIRI="xpUF:AMD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+            <Class abbreviatedIRI="xpUF:AM"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+        <Class abbreviatedIRI="xpUF:MediumStorage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+        <Class abbreviatedIRI="xpUF:Samsung"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="xpUF:Asus"/>
+        <Class abbreviatedIRI="xpUF:Gigabyte"/>
+        <Class abbreviatedIRI="xpUF:MSI"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="xpUF:CPU"/>
+        <Class abbreviatedIRI="xpUF:Case"/>
+        <Class abbreviatedIRI="xpUF:Cooling"/>
+        <Class abbreviatedIRI="xpUF:GPU"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <Class abbreviatedIRI="xpUF:Motherboard"/>
+        <Class abbreviatedIRI="xpUF:PSU"/>
+        <Class abbreviatedIRI="xpUF:Storage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="xpUF:DDR2"/>
+        <Class abbreviatedIRI="xpUF:DDR3"/>
+        <Class abbreviatedIRI="xpUF:DDR4"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="xpUF:HDD"/>
+        <Class abbreviatedIRI="xpUF:SSD"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="xpUF:Microphone"/>
+        <Class abbreviatedIRI="xpUF:Mouse"/>
+        <Class abbreviatedIRI="xpUF:R8NFU6JkxugtQKWv4kM69ug"/>
+        <Class abbreviatedIRI="xpUF:Stylist"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+        <NamedIndividual IRI="#AMDRyzen52600_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:B450_TOMAHAWK"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CMV16GX4M1A2133C15"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CMZ8GX3M1A1600C10"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CMZ8GX3M1A1600C10"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CT25664AA800"/>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CT25664BC1339"/>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+        <NamedIndividual IRI="#CoolerMasterHyper212_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Corsair_-_CXM_550_W_80"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Corsair_200R"/>
+        <NamedIndividual IRI="#Corsair_200R_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:EVGA_02G-P4-6150-KR"/>
+        <NamedIndividual IRI="#EVGA_02G-P4-6150-KR_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:EVGA_04G-P4-6251-KR"/>
+        <NamedIndividual IRI="#EVGA_04G-P4-6251-KR_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:F3-1600C11S-4GNT"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:F3-1600C11S-4GNT"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:F4-2133C15S-4GIS"/>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:GamingKeyboard"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N1050OC-2GD"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N2070WF3-8GC"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Gigabyte_GV-N2070WF3-8GC"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:H81-PLUS"/>
+        <NamedIndividual IRI="#H81-PLUS_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:HX421S13IB8"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:HX426C16FR16"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Headset"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Kingston_A400120GB"/>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:M386B4G70DM0-CMA"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:MSI_GTX_1050_Ti_GAMING_X_4G"/>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:MSI_RX_580_ARMOR_8G_OC"/>
+        <NamedIndividual IRI="#MSI_RX_580_ARMOR_8G_OC_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:StandardMouse"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+        <NamedIndividual IRI="#Samsung860Evo250GB_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Western_Digital_-_AV-GP_500_GB"/>
+        <NamedIndividual IRI="#Western_Digital_-_AV-GP_500_GB_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:YD2600BBAFBOX"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:CT500MX500SSD1"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:BX80601950"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="xpUF:BX80601950"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#AMDRyzen52600_1"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+        <NamedIndividual IRI="#CoolerMasterHyper212_1"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+        <NamedIndividual IRI="#Corsair_200R_2"/>
+        <NamedIndividual IRI="#EVGA_02G-P4-6150-KR_1"/>
+        <NamedIndividual IRI="#EVGA_04G-P4-6251-KR_1"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_2"/>
+        <NamedIndividual IRI="#H81-PLUS_1"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+        <NamedIndividual IRI="#Headset_1"/>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+        <NamedIndividual IRI="#MSI_RX_580_ARMOR_8G_OC_1"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Samsung860Evo250GB_1"/>
+        <NamedIndividual IRI="#Western_Digital_-_AV-GP_500_GB_1"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_2"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Linda_computer"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Mies_computer"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Nikki_computer"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Perry_computer"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Rick_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#Zoe_computer"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#Headset_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <NamedIndividual IRI="#bobs_computer"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#AMDRyzen52600_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#AMDRyzen52600_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#B450_TOMAHAWK_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">117</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CMV16GX4M1A2133C15_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CMZ8GX3M1A1600C10_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CT25664AA800_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CT25664BC1339_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#CoolerMasterHyper212_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#CoolerMasterHyper212_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">41</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Corsair_-_CXM_550_W_80_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Corsair_200R_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Corsair_200R_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Corsair_200R_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">54</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#EVGA_02G-P4-6150-KR_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#EVGA_02G-P4-6150-KR_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#EVGA_04G-P4-6251-KR_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#EVGA_04G-P4-6251-KR_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">186</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#F3-1600C11S-4GNT_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#F4-2133C15S-4GIS_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#GamingKeyboard_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N1050OC-2GD_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">465</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Gigabyte_GV-N2070WF3-8GC_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">470</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#H81-PLUS_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#H81-PLUS_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">56</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#HX421S13IB8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">88</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#HX426C16FR16_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Headset_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Headset_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Kingston_A400120GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#M386B4G70DM0-CMA_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">395</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">166</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#MSI_RX_580_ARMOR_8G_OC_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">202</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#MSI_RX_580_ARMOR_8G_OC_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">69</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Mouse_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Samsung860Evo250GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Samsung860Evo250GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#Western_Digital_-_AV-GP_500_GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#Western_Digital_-_AV-GP_500_GB_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">144</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;AMD_-_Ryzen_5_2600&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">39</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Cooler_Master_-_Hyper_212&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">39</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Crucial_-_MX500_500_GB&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">71</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">281</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Intel_-_Core_i7-950&apos;_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">282</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#delivery_days"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#item_price"/>
+        <NamedIndividual IRI="#&apos;Samsung_-_860_Evo_250_GB&apos;_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">47</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUCores"/>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUProperties"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUSocket"/>
+        <ObjectProperty abbreviatedIRI="xpUF:MotherBoardProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUSpeed"/>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasHardDrive"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasInterface"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasPrice"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+        <ObjectProperty abbreviatedIRI="xpUF:HasInterface"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+        <ObjectProperty abbreviatedIRI="xpUF:CPUProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+        <ObjectProperty abbreviatedIRI="xpUF:MotherBoardProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:MotherBoardProperties"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:R9Fy0YWKkRNfpQWJmoUWPL5"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:RamSlots"/>
+        <ObjectProperty abbreviatedIRI="xpUF:MotherBoardProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:RjwtaqfWXyvBWjMPPZx9tI"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="xpUF:hasPart"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:CPU"/>
+            <Class abbreviatedIRI="xpUF:Motherboard"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:HasPrice"/>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:HasPrice"/>
+        <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:HasPrice"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+        <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:CPU"/>
+            <Class abbreviatedIRI="xpUF:GPU"/>
+            <Class abbreviatedIRI="xpUF:Motherboard"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:R9Fy0YWKkRNfpQWJmoUWPL5"/>
+        <Class abbreviatedIRI="xpUF:Computer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="xpUF:RjwtaqfWXyvBWjMPPZx9tI"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="xpUF:HasCPUSocket"/>
+        <Class abbreviatedIRI="xpUF:CPUSockets"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="xpUF:HasSocket"/>
+        <Class abbreviatedIRI="xpUF:Interfaces"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="xpUF:MaxRAM"/>
+        <Class abbreviatedIRI="xpUF:MemoryQuantities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="xpUF:R9Fy0YWKkRNfpQWJmoUWPL5"/>
+        <Class abbreviatedIRI="xpUF:Memory"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#delivery_days"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#item_price"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#item_price"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="xpUF:Computer"/>
+            <Class abbreviatedIRI="xpUF:R6KTEriqId00kTIZki5blq"/>
+            <Class abbreviatedIRI="xpUF:RDpBs6DXJfwjWljvKnjFFK7"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:BX80601950</AbbreviatedIRI>
+        <Literal>Intel - Core i7-950</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:BigStorage</AbbreviatedIRI>
+        <Literal>BigStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:CPU</AbbreviatedIRI>
+        <Literal>CPU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:CT500MX500SSD1</AbbreviatedIRI>
+        <Literal>Crucial - MX500 500 GB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Case</AbbreviatedIRI>
+        <Literal>Case</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Computer</AbbreviatedIRI>
+        <Literal>Computer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Cooler_Master_-_Hyper_212_EVO_82.9_CFM_Sleeve_Bearing_CPU_Cooler</AbbreviatedIRI>
+        <Literal>Cooler Master - Hyper 212</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Cooling</AbbreviatedIRI>
+        <Literal>Cooling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:GPU</AbbreviatedIRI>
+        <Literal>GPU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Game</AbbreviatedIRI>
+        <Literal>Game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Headset</AbbreviatedIRI>
+        <Literal>Headset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:HighEnd</AbbreviatedIRI>
+        <Literal>HighEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:HighMemory</AbbreviatedIRI>
+        <Literal>HighMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Kids</AbbreviatedIRI>
+        <Literal>Kids</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Kingston_A400120GB</AbbreviatedIRI>
+        <Literal>Kingston - A400 120 GB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:LowEnd</AbbreviatedIRI>
+        <Literal>LowEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:LowMemory</AbbreviatedIRI>
+        <Literal>LowMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:LowStorage</AbbreviatedIRI>
+        <Literal>LowStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:MediumMemory</AbbreviatedIRI>
+        <Literal>MediumMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:MediumStorage</AbbreviatedIRI>
+        <Literal>MediumStorage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Memory</AbbreviatedIRI>
+        <Literal>Memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:MiddleEnd</AbbreviatedIRI>
+        <Literal>MiddleEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Monitor</AbbreviatedIRI>
+        <Literal>Monitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Motherboard</AbbreviatedIRI>
+        <Literal>Motherboard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Mouse</AbbreviatedIRI>
+        <Literal>Mouse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:PSU</AbbreviatedIRI>
+        <Literal>PSU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:R6KTEriqId00kTIZki5blq</AbbreviatedIRI>
+        <Literal>Peripherals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:R8NFU6JkxugtQKWv4kM69ug</AbbreviatedIRI>
+        <Literal>Keyboard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:R9Fy0YWKkRNfpQWJmoUWPL5</AbbreviatedIRI>
+        <Literal>hasMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:RBzTQssrN7YghpgZHj6wNZ6</AbbreviatedIRI>
+        <Literal>Programming</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:RCE5D4SbLjyyFpNNoKhvdHa</AbbreviatedIRI>
+        <Literal>VideoEditing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:RDpBs6DXJfwjWljvKnjFFK7</AbbreviatedIRI>
+        <Literal>Parts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:RKy0yxxiQv7rfa8Zx0A8Ut</AbbreviatedIRI>
+        <Literal>Office</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:RjwtaqfWXyvBWjMPPZx9tI</AbbreviatedIRI>
+        <Literal>containsMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Speakers</AbbreviatedIRI>
+        <Literal>Speakers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:UltraHighMemory</AbbreviatedIRI>
+        <Literal>UltraHighMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:VeryLowMemory</AbbreviatedIRI>
+        <Literal>VeryLowMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:Work</AbbreviatedIRI>
+        <Literal>Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xpUF:YD2600BBAFBOX</AbbreviatedIRI>
+        <Literal>AMD - Ryzen 5 2600</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MZ-76E250B/EU</IRI>
+        <Literal>Samsung - 860 Evo 250 GB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Price"/>
+        <IRI>#F3-1600C11S-4GNT_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Price"/>
+        <IRI>#F3-1600C11S-4GNT_2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
