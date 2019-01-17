@@ -5,9 +5,10 @@ import pprint
 from owlready2 import *
 from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs
 
-onto = get_ontology("Bart2.owl").load()
+onto = get_ontology("Shared4.owl").load()
 obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 
+# Best part: argmin(itemprice + 3* delivery days)
 
 def find_part(computer, missingClass):
 	# computer is an individual of class Computer
@@ -21,34 +22,47 @@ def find_part(computer, missingClass):
 		# get MOBO CPU socket
 		for component in computer.hasPart:
 			if component in list(onto.search(is_a=obo.Motherboard)):
-				# print(component.is_a[0].is_a)
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'CPUSocket' in str(s)]
 				cpuMobo = str(component.is_a[0].is_a[indices[0]]).split("&")[1].strip().split(" ")[-1]
 		# check options (currently ignoring intel because no cpu socket yet)
 		# return best from replacements
 		# for now cheapest
-		cheapest = None
+		best = None
 		minPrice = 99999
 		for o in options[3:]: # REMOVE SLICING AFTER ADDING HASCPUSOCKET TO INTEL
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'CPUSocket' in str(s)]
-			CPUsocket = str(o.is_a[0].is_a[indices[0]]).split("&")[1].split(" ")[2]
+			CPUsocket = str(o.is_a[0].is_a[indices[0]]).split("&")[0].split(" ")[-1]
 			if cpuMobo != CPUsocket:
 				continue
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
+			if len(o.item_price)==0:
+				print("No item price known")
+				continue
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
 	elif missingClass == obo.GPU:
 		print("GPU missing")
-		cheapest = None
+		best = None
 		minPrice = 99999
 		for o in options:
 			# return best from replacements
 			# for now cheapest
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
+			if len(o.item_price)==0:
+				print("No item price known")
+				continue
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
 		# MAXram? Or no checks?
 	elif missingClass == obo.Memory:
 		print("RAM missing")
@@ -60,10 +74,9 @@ def find_part(computer, missingClass):
 		# return best from replacements
 		# for now cheapest
 		memorySizes = ["VeryLowMemory", "LowMemory", "MediumMemory", "HighMemory", "UltraHighMemory"]
-		cheapest = None
+		best = None
 		minPrice = 99999
 		for o in options: # CHECK CORRECT DDR VERSION?
-			# print(o.is_a[0].is_a)
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'Memory' in str(s)]
 			ramSize = str(o.is_a[0].is_a[indices[0]]).split("&")[-1].split(".")[-1]
 			# print(ramSize)
@@ -72,10 +85,14 @@ def find_part(computer, missingClass):
 			if len(o.item_price)==0:
 				print("No item price known")
 				continue
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
 	elif missingClass == obo.Motherboard:
 		print("Mobo missing")
 		# CPU socket and MAXram
@@ -87,13 +104,13 @@ def find_part(computer, missingClass):
 				ramSize = str(component.is_a[0].is_a[indices[0]]).split("&")[-1].split(".")[-1]
 			elif component in list(onto.search(is_a=obo.CPU)) and not component in list(onto.search(is_a=obo.INTEL)): #REMOVE SECOND PART WHEN INTEL HAS CPU SOCKET
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'CPUSocket' in str(s)]
-				CPUsocket = str(component.is_a[0].is_a[indices[0]]).split("&")[1].split(" ")[2]
+				CPUsocket = str(component.is_a[0].is_a[indices[0]]).split("&")[0].split(" ")[-1]
 		if ramSize == None or CPUsocket==None:
 			print("Cannot select motherboard without knowing RAM and CPU")
 			return None
 		# check against possible motherboards
 		memorySizes = ["VeryLowMemory", "LowMemory", "MediumMemory", "HighMemory", "UltraHighMemory"]
-		cheapest = None
+		best = None
 		minPrice = 99999
 		for o in options:
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'CPUSocket' in str(s)]
@@ -105,24 +122,17 @@ def find_part(computer, missingClass):
 			if len(o.item_price)==0:
 				print("No item price known")
 				continue
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
 	elif missingClass == obo.PSU:
 		print("PSU missing")
-		cheapest = None
-		minPrice = 99999
-		for o in options:
-			# return best from replacements
-			# for now cheapest
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
-		# Wattage? Or no checks?
-	else:
-		cheapest = None
+		best = None
 		minPrice = 99999
 		for o in options:
 			# return best from replacements
@@ -130,10 +140,31 @@ def find_part(computer, missingClass):
 			if len(o.item_price)==0:
 				print("No item price known")
 				continue
-			if o.item_price[0] < minPrice:
-				cheapest = o
-				minPrice = o.item_price[0]
-		return cheapest
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
+	else:
+		best = None
+		minPrice = 99999
+		for o in options:
+			# return best from replacements
+			# for now cheapest
+			if len(o.item_price)==0:
+				print("No item price known")
+				continue
+			if len(o.delivery_days)>0:
+				util = o.item_price[0] + 3*o.delivery_days[0]
+			else:
+				util = o.item_price[0] 
+			if util < minPrice:
+				best = o
+				minPrice = util
+		return best
 
 obo_parts = []
 parts = ['Corsair_200R_1', "'AMD_-_Ryzen_5_2600'_1", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1', 'CMZ8GX3M1A1600C10_1']

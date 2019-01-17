@@ -4,7 +4,7 @@ import math
 import pprint
 from owlready2 import *
 
-is_debug = True
+is_debug = False
 
 
 def get_label(x):

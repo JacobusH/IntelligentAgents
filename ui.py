@@ -7,7 +7,7 @@ import random
 from owlready2 import *
 
 class Application(tk.Frame):
-	is_debug = True
+	is_debug = False
 	onto = None
 	obo = None
 
