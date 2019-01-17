@@ -1373,11 +1373,11 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <xpUF:hasPart rdf:resource="#Corsair_-_CXM_550_W_80_1"/>
   <xpUF:hasPart rdf:resource="#B450_TOMAHAWK_1"/>
-  <xpUF:hasPart rdf:resource="#Western_Digital_-_AV-GP_500_GB_1"/>
-  <xpUF:hasPart rdf:resource="#F3-1600C11S-4GNT_2"/>
-  <xpUF:hasPart rdf:resource="#EVGA_04G-P4-6251-KR_1"/>
-  <xpUF:hasPart rdf:resource="#CoolerMasterHyper212_1"/>
   <xpUF:hasPart rdf:resource="#Corsair_200R_2"/>
+  <xpUF:hasPart rdf:resource="#CMZ8GX3M1A1600C10_2"/>
+  <xpUF:hasPart rdf:resource="#MSI_GTX_1050_Ti_GAMING_X_4G_1"/>
+  <xpUF:hasPart rdf:resource="#Kingston_A400120GB_1"/>
+  <xpUF:hasPart rdf:resource="#CoolerMasterHyper212_1"/>
 </xpUF:Computer>
 
 <xpUF:Memory rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#F3-1600C11S-4GNT_1">
@@ -1440,44 +1440,6 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </xpUF:Memory>
 
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Asus"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Gigabyte"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR2"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR4"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Microphone"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Mouse"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R8NFU6JkxugtQKWv4kM69ug"/>
-    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Stylist"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
 <owl:AllDifferent>
   <owl:distinctMembers rdf:parseType="Collection">
     <rdf:Description rdf:about="#AMDRyzen52600_1"/>
@@ -1528,6 +1490,44 @@
     <rdf:Description rdf:about="#'Samsung_-_860_Evo_250_GB'_1"/>
   </owl:distinctMembers>
 </owl:AllDifferent>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Microphone"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Mouse"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#R8NFU6JkxugtQKWv4kM69ug"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Stylist"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR2"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR3"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#DDR4"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#CPU"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Case"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Cooling"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#GPU"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Memory"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Motherboard"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#PSU"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Asus"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#Gigabyte"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh#MSI"/>
+  </owl:members>
+</owl:AllDisjointClasses>
 
 
 </rdf:RDF>

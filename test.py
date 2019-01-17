@@ -58,8 +58,23 @@ tmp = 'tmp'
 # 	print(i)
 # for i in obo.CPU.instances(): # only has bottom level indivs
 # 	print(i)
-for i in obo.Memory.instances():
-	print(i)
+for i in obo.Storage.instances():
+	if not hasattr(i, "delivery_days"):
+		print(i.name)
+	elif len(i.delivery_days) <= 0:
+		print(i.name)
+	else:
+		tmp = 'tmp'
+
+# xpUFBIdmzwyCPpbfIg4hh.CPU done
+# xpUFBIdmzwyCPpbfIg4hh.Case ok
+# xpUFBIdmzwyCPpbfIg4hh.Cooling ok
+# xpUFBIdmzwyCPpbfIg4hh.GPU
+# xpUFBIdmzwyCPpbfIg4hh.Memory ok
+# xpUFBIdmzwyCPpbfIg4hh.Motherboard done
+# xpUFBIdmzwyCPpbfIg4hh.PSU done
+# xpUFBIdmzwyCPpbfIg4hh.Storage
+
 
 ### working add computer to onto with parts
 # obo_parts = []

@@ -160,18 +160,18 @@ class Application(tk.Frame):
 				good_part = find_part(new_computer, x)
 				if good_part != None:
 					new_parts.append(good_part)
-					self.listbox_sugg.insert("end", "{}{:>35s}".format(x._name, good_part.name)) # part , name
-					self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Price: ", good_part.item_price[0])) # price
-					self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Delivery Days: ", good_part.delivery_days[0])) # delivery days
+					self.listbox_sugg.insert("end", "{}{}".format(x._name, (" " * 10) +good_part.name)) # part , name
+					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
+					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
 			else:
 				le_mobo = x
 		# now do mobo
 		if le_mobo != None:
 			good_part = find_part(new_computer, x)
 			new_parts.append(good_part)
-			self.listbox_sugg.insert("end", "{}{:>35s}".format(x._name, good_part.name)) # part , name
-			self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Price: ", good_part.item_price[0])) # price
-			self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Delivery Days: ", good_part.delivery_days[0])) # delivery days
+			self.listbox_sugg.insert("end", "{}{:>35}".format(x._name, (" " * 10) +good_part.name)) # part , name
+			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
+			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
 
 
 	def toggle_geom(self, event):
