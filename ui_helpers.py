@@ -48,25 +48,25 @@ def assemble_parts(self):
 	return parts
 
 def replace_right_label(self, obo_elem, possib_parents):
-  # find what parent this elem belongs to
-  le_parent = recur_find_parent(obo_elem, possib_parents)
-  # and then place the element as that parent's value in the build section
-  if le_parent == "Case":
-    self.label_val_case['text'] = obo_elem.name
-  elif le_parent == "CPU":
-    self.label_val_cpu['text'] = obo_elem.name
-  elif le_parent == "Cooling":
-    self.label_val_cooling['text'] = obo_elem.name
-  elif le_parent == "GPU":
-    self.label_val_gpu['text'] = obo_elem.name
-  elif le_parent == "Memory":
-    self.label_val_mem['text'] = obo_elem.name
-  elif le_parent == "Motherboard":
-    self.label_val_mobo['text'] = obo_elem.name
-  elif le_parent == "PSU":
-    self.label_val_psu['text'] = obo_elem.name
-  elif le_parent == "Storage":
-    self.label_val_storage['text'] = obo_elem.name
+	# find what parent this elem belongs to
+	le_parent = recur_find_parent(obo_elem, possib_parents)
+	# and then place the element as that parent's value in the build section
+	if le_parent == "Case":
+		self.label_val_case['text'] = obo_elem.name
+	elif le_parent == "CPU":
+		self.label_val_cpu['text'] = obo_elem.name
+	elif le_parent == "Cooling":
+		self.label_val_cooling['text'] = obo_elem.name
+	elif le_parent == "GPU":
+		self.label_val_gpu['text'] = obo_elem.name
+	elif le_parent == "Memory":
+		self.label_val_mem['text'] = obo_elem.name
+	elif le_parent == "Motherboard":
+		self.label_val_mobo['text'] = obo_elem.name
+	elif le_parent == "PSU":
+		self.label_val_psu['text'] = obo_elem.name
+	elif le_parent == "Storage":
+		self.label_val_storage['text'] = obo_elem.name
 
 # i would do this simpler but each label val needs its own reference for text replacement...
 def create_right_labels(self, frame):

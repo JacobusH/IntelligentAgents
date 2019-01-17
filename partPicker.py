@@ -4,7 +4,7 @@ import math
 import pprint
 from owlready2 import *
 
-is_debug = False
+is_debug = True
 
 
 def get_label(x):
@@ -140,14 +140,21 @@ def recur_find_parent(cur_parent, possib_parents):
 	if cur_parent is None or cur_parent == []:
 		return None
 	else:
-		for new_parent in cur_parent.is_a: # is one of our direct parents a match?
-			new_parent_name = new_parent.name
-			for par in possib_parents:
-				if par == new_parent_name: # we have a match
-					return par
-				elif par == 'Motherboard' and par in new_parent_name: # mobo is a bit special
-					return par
-		return recur_find_parent(new_parent, possib_parents) # keep going
+		if hasattr(cur_parent, "is_a"):
+			parents = []
+			for new_parent in cur_parent.is_a: # is one of our direct parents a match?
+				if hasattr(new_parent, "name"):
+					new_parent_name = new_parent.name
+					for par in possib_parents:
+						if par == new_parent_name: # we have a match
+							return par
+						elif par == 'Motherboard' and par in new_parent_name: # mobo is a bit special
+							return par
+				parents.append(recur_find_parent(new_parent, possib_parents))
+			for parent in parents:
+				if parent in possib_parents:
+					return parent # keep going
+		
 
 def find_missing_parts(comp_name):
 	onto = None
