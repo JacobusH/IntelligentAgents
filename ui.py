@@ -186,15 +186,20 @@ class Application(tk.Frame):
 					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
 					# add to the a tmp computer that mobo uses so we can get a suggestion
 					tmp_comp.hasPart.append(x)
+				else:
+					self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +"No compatible ", x._name))
 			else:
 				le_mobo = x
 		# now do mobo
 		if le_mobo != None:
 			good_part = find_part(tmp_comp, x) # use tmp_comp here
-			new_parts.append(good_part)
-			self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
-			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
-			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
+			if good_part != None:
+				new_parts.append(good_part)
+				self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
+				self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
+				self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
+			else:
+				self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +"No compatible ", "Motherboard"))
 
 
 	def toggle_geom(self, event):
@@ -252,7 +257,7 @@ app = Application(master=root)
 
 # method calls to the window manager class
 app.master.title("PC Part Picker")
-app.master.maxsize(1000, 400)
+app.master.maxsize(1000, 600)
 
 # start the app
 app.mainloop()

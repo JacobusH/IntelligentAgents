@@ -16,7 +16,7 @@ def find_part(computer, missingClass):
 	# missingClass is the class ID of the missing component
 	# for each type: determine compatibility and utility
 	# sync_reasoner()
-	onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared6.owl").load()
+	onto = get_ontology("Shared6.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	options = get_indivs(str(missingClass).split(".")[-1])
 
@@ -31,12 +31,12 @@ def find_part(computer, missingClass):
 			if component in list(onto.search(is_a=obo.Motherboard)):
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'CPUSocket' in str(s)]
 				cpuMobo = str(component.is_a[0].is_a[indices[0]]).split("&")[1].strip().split(" ")[-1]
-		# check options (currently ignoring intel because no cpu socket yet)
+		# check options
 		# return best from replacements
 		# for now cheapest
 		best = None
 		minPrice = 99999
-		for o in options[3:]: # REMOVE SLICING AFTER ADDING HASCPUSOCKET TO INTEL
+		for o in options:
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'CPUSocket' in str(s)]
 			CPUsocket = str(o.is_a[0].is_a[indices[0]]).split("&")[0].split(" ")[-1]
 			if cpuMobo != CPUsocket:
@@ -74,6 +74,7 @@ def find_part(computer, missingClass):
 	elif missingClass == obo.Memory:
 		print("RAM missing")
 		# get MOBO MaxRAM
+		maxRAM = "VeryLowMemory"
 		for component in computer.hasPart:
 			if component in list(onto.search(is_a=obo.Motherboard)):
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'MaxRAM' in str(s)]
@@ -83,10 +84,9 @@ def find_part(computer, missingClass):
 		memorySizes = ["VeryLowMemory", "LowMemory", "MediumMemory", "HighMemory", "UltraHighMemory"]
 		best = None
 		minPrice = 99999
-		for o in options: # CHECK CORRECT DDR VERSION?
+		for o in options:
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'Memory' in str(s)]
 			ramSize = str(o.is_a[0].is_a[indices[0]]).split("&")[-1].split(".")[-1]
-			# print(ramSize)
 			if (ramSize not in memorySizes) or memorySizes.index(ramSize) > memorySizes.index(maxRAM):
 				continue
 			if len(o.item_price)==0:
@@ -109,7 +109,7 @@ def find_part(computer, missingClass):
 			if component in list(onto.search(is_a=obo.Memory)):
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'Memory' in str(s)]
 				ramSize = str(component.is_a[0].is_a[indices[0]]).split("&")[-1].split(".")[-1]
-			elif component in list(onto.search(is_a=obo.CPU)) and not component in list(onto.search(is_a=obo.INTEL)): #REMOVE SECOND PART WHEN INTEL HAS CPU SOCKET
+			elif component in list(onto.search(is_a=obo.CPU)): 
 				indices = [i for i, s in enumerate(component.is_a[0].is_a) if 'CPUSocket' in str(s)]
 				CPUsocket = str(component.is_a[0].is_a[indices[0]]).split("&")[0].split(" ")[-1]
 		if ramSize == None or CPUsocket==None:
@@ -124,7 +124,7 @@ def find_part(computer, missingClass):
 			cpuMobo = str(o.is_a[0].is_a[indices[0]]).split("&")[1].split(" ")[2]
 			indices = [i for i, s in enumerate(o.is_a[0].is_a) if 'MaxRAM' in str(s)]
 			maxRAM = str(o.is_a[0].is_a[indices[0]]).split("&")[2].split(" ")[2].split(".")[1][:-1]
-			if (ramSize not in memorySizes) or memorySizes.index(ramSize) > memorySizes.index(maxRAM) or CPUsocket != cpuMobo:
+			if (ramSize in memorySizes and memorySizes.index(ramSize)) > memorySizes.index(maxRAM) or CPUsocket != cpuMobo:
 				continue
 			if len(o.item_price)==0:
 				print("No item price known")
