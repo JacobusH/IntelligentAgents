@@ -10,9 +10,9 @@ is_debug = True
 def get_label(x):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	is_str = isinstance(x, str)
@@ -33,9 +33,9 @@ def get_label(x):
 def get_classes():
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	sync_reasoner()
 
@@ -58,9 +58,9 @@ def get_classes():
 def get_subclasses_recur(class_id, is_IRIS = False):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -79,9 +79,9 @@ def get_subclasses_recur(class_id, is_IRIS = False):
 def get_subclasses_onelevel(class_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -98,24 +98,29 @@ def get_subclasses_onelevel(class_id):
 def get_indivs(class_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
-	indivs = []
-	for i in obo[class_id].instances(): # only has bottom level indivs
-		print("indiv: %s", i)
-		indivs.append(i)
-	return(indivs)
+	# special for memory
+	if 'Memory' in str(obo[class_id].is_a[0]): # memory
+		return [obo.Memory(class_id)]
+	else:
+		# return [obo[class_id]]
+		indivs = []
+		for i in obo[class_id].instances(): # only has bottom level indivs
+			print("indiv: %s", i)
+			indivs.append(i)
+		return(indivs)
 
 def get_obo_elem(elem_id):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	return obo[elem_id]
@@ -123,9 +128,9 @@ def get_obo_elem(elem_id):
 def save_computer(comp_name, parts):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# make the computer
 	obo_parts = []
@@ -134,7 +139,8 @@ def save_computer(comp_name, parts):
 		if len(obo_part) > 0:
 			obo_parts.append(obo_part[0])
 	new_computer = obo.Computer(comp_name, namespace = onto, hasPart = obo_parts)
-	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl")
+	onto.save("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl")
+	return new_computer
 
 def recur_find_parent(cur_parent, possib_parents):
 	if cur_parent is None or cur_parent == []:
@@ -159,9 +165,9 @@ def recur_find_parent(cur_parent, possib_parents):
 def find_missing_parts(comp_name):
 	onto = None
 	if is_debug:
-		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared4.owl").load()
+		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
 	else:
-		onto = get_ontology("Shared4.owl").load()
+		onto = get_ontology("Shared5.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
 	comp_parts = onto.search(iri = "*" + comp_name)[0].hasPart

@@ -3,10 +3,11 @@ import os
 import math
 import pprint
 from owlready2 import *
-from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs
+from partPicker import get_label, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, find_missing_parts
 
-onto = get_ontology("Shared4.owl").load()
-obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
+# onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
+# # onto = get_ontology("Shared5.owl").load()
+# obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 
 # Best part: argmin(itemprice + 3* delivery days)
 
@@ -15,7 +16,13 @@ def find_part(computer, missingClass):
 	# missingClass is the class ID of the missing component
 	# for each type: determine compatibility and utility
 	# sync_reasoner()
+	onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared5.owl").load()
+	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	options = get_indivs(str(missingClass).split(".")[-1])
+
+	if isinstance(computer, str):
+		computer = obo.Computer(computer)
+
 	if missingClass == obo.CPU:
 		print("CPU missing")
 		# CPU socket against mobo
@@ -166,28 +173,38 @@ def find_part(computer, missingClass):
 				minPrice = util
 		return best
 
-obo_parts = []
-parts = ['Corsair_200R_1', "'AMD_-_Ryzen_5_2600'_1", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1', 'CMZ8GX3M1A1600C10_1']
-for x in parts:
-	obo_part = onto.search(iri = "*" + x)
-	if len(obo_part) > 0:
-		obo_parts.append(obo_part[0])
-new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
+# obo_parts = []
+# parts = ['Corsair_200R_1', "'AMD_-_Ryzen_5_2600'_1", 'EVGA_04G-P4-6251-KR_1', 'B450_TOMAHAWK_1', 'Corsair_-_CXM_550_W_80_1', 'Kingston_A400120GB_1', 'CMZ8GX3M1A1600C10_1']
+# for x in parts:
+# 	obo_part = onto.search(iri = "*" + x)
+# 	if len(obo_part) > 0:
+# 		obo_parts.append(obo_part[0])
+# new_computer = obo.Computer("Obo_comp_1", namespace = onto, hasPart = obo_parts)
 
-sync_reasoner()
-newpart = find_part(new_computer, obo.CPU)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.PSU)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.GPU)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.Memory)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.Case)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.Storage)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.Motherboard)
-print(newpart, newpart.item_price)
-newpart = find_part(new_computer, obo.Cooling)
-print(newpart, newpart.item_price)
+# missing_parts = find_missing_parts("Obo_comp_1")
+# missing_parts_obo = []
+# for x in missing_parts:
+# 	missing_parts_obo.append(get_obo_elem(x))
+
+# sync_reasoner()
+
+# new_parts = []
+# for x in missing_parts_obo:
+# 	new_parts.append(find_part(new_computer, x))
+
+# newpart = find_part(new_computer, obo.CPU)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.PSU)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.GPU)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.Memory)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.Case)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.Storage)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.Motherboard)
+# print(newpart, newpart.item_price)
+# newpart = find_part(new_computer, obo.Cooling)
+# print(newpart, newpart.item_price)

@@ -44,7 +44,7 @@ def assemble_parts(self):
 	if psu != "No Selection":
 		parts.append(psu)
 	if storage != "No Selection":
-		parts.append(storage)
+		parts.append(storage)	
 	return parts
 
 def replace_right_label(self, obo_elem, possib_parents):
@@ -140,10 +140,14 @@ def create_right_labels(self, frame):
 		### Suggested part
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
-		self.label_sugg = tk.Label(frame_tmp, text="test", width=10, anchor="w", fg="green", font=("Helvetica", 22))
-		self.label_sugg.pack(side="left", pady=8)
-		# in order to set this label use the code below
-		# self.label_sugg['text'] = "The Suggested Component Name"
+		self.listbox_sugg = Listbox(frame_tmp, width=50, height=20)
+		# self.listbox.bind('<<ListboxSelect>>', self.lb_onselect)
+		self.listbox_sugg.pack(side="left", fill="both", pady=10)
+		# self.scrollbar.config(command=self.listbox.yview)
+		# self.label_sugg = tk.Label(frame_tmp, text="test", width=10, anchor="w", fg="green", font=("Helvetica", 22))
+		# self.label_sugg.pack(side="left", pady=8)
+		# # in order to set this label use the code below
+		# # self.label_sugg['text'] = "The Suggested Component Name"
 
 ### if we didn't need named label vals could use this...
 # for x in get_subclasses_onelevel("RDpBs6DXJfwjWljvKnjFFK7"): # for x in Parts

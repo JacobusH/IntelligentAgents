@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import ttk, Scrollbar, Listbox, font
-from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, save_computer
+from partPicker import get_classes, get_subclasses_recur, get_subclasses_onelevel, get_obo_elem, get_indivs, save_computer, find_missing_parts
 from ui_helpers import create_right_labels, replace_right_label, assemble_parts, recur_indent
+from newPart import find_part
 import math
 import random
 from owlready2 import *
@@ -135,21 +136,43 @@ class Application(tk.Frame):
 		# now delete everything currently in the listbox
 		self.listbox.delete(0, tk.END)
 		recur_indent(self, text, sub_pieces, 0, 0)
-		
-		####now add the subpieces
-		# cur_parent = None
-		# last_parent = None
-		# for idx, elem in enumerate(sub_pieces):
-		# 	cur_parent = get_obo_elem(elem)
-		# 	if idx != 0:
-		# 		self.listbox.insert("end", "{:>15s}".format(elem))
-		# 	else:
-		# 		self.listbox.insert("end", elem)
-		# 	last_parent = cur_parent
+		# special for memory only...
+		if text == "Memory":
+			for i in get_indivs("Memory"):
+				self.listbox.insert("end", "{}".format(i.name))
 
 	def save_computer(self):
 		parts = assemble_parts(self)
-		save_computer(self.comp_name.get(), parts)
+		# save the comp to the onto so we can get it later
+		new_computer = save_computer(self.comp_name.get(), parts)
+		# for each missing part find the best part to suggest
+		missing_parts = find_missing_parts(self.comp_name.get())
+		missing_parts_obo = []
+		for x in missing_parts:
+			missing_parts_obo.append(get_obo_elem(x))
+		sync_reasoner()
+		# now find the suggested part
+		new_parts = []
+		# need to do mobo last
+		le_mobo = None 
+		for x in missing_parts_obo:
+			if x.name != "Motherboard":
+				good_part = find_part(new_computer, x)
+				if good_part != None:
+					new_parts.append(good_part)
+					self.listbox_sugg.insert("end", "{}{:>35s}".format(x._name, good_part.name)) # part , name
+					self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Price: ", good_part.item_price[0])) # price
+					self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Delivery Days: ", good_part.delivery_days[0])) # delivery days
+			else:
+				le_mobo = x
+		# now do mobo
+		if le_mobo != None:
+			good_part = find_part(new_computer, x)
+			new_parts.append(good_part)
+			self.listbox_sugg.insert("end", "{}{:>35s}".format(x._name, good_part.name)) # part , name
+			self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Price: ", good_part.item_price[0])) # price
+			self.listbox_sugg.insert("end", "{:>15s}{:>15d}".format("Delivery Days: ", good_part.delivery_days[0])) # delivery days
+
 
 	def toggle_geom(self, event):
 		geom=self.master.winfo_geometry()
@@ -157,6 +180,7 @@ class Application(tk.Frame):
 		self.master.geometry(self._geom)
 		self._geom=geom
 
+	### UNUSED
 	def combo_selected(self, event):
 		selected_piece = self.combo_computer.get()
 		sub_pieces = get_subclasses_recur(selected_piece)
