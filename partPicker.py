@@ -4,7 +4,7 @@ import math
 import pprint
 from owlready2 import *
 
-is_debug = True
+is_debug = False
 
 
 def get_label(x):
@@ -12,7 +12,7 @@ def get_label(x):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	is_str = isinstance(x, str)
@@ -35,7 +35,7 @@ def get_classes():
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	sync_reasoner()
 
@@ -60,7 +60,7 @@ def get_subclasses_recur(class_id, is_IRIS = False):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -81,7 +81,7 @@ def get_subclasses_onelevel(class_id):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -100,7 +100,7 @@ def get_indivs(class_id):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 
@@ -115,7 +115,7 @@ def get_obo_elem(elem_id):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# sync_reasoner()
 	return obo[elem_id]
@@ -125,7 +125,7 @@ def save_computer(comp_name, parts):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	# make the computer
 	obo_parts = []
@@ -154,7 +154,7 @@ def find_missing_parts(comp_name):
 	if is_debug:
 		onto = get_ontology("E:\\Homework\\Intelligent Agents\\PartPicker\\Shared2.owl").load()
 	else:
-		onto = get_ontology("Shared2.owl").load()
+		onto = get_ontology("Shared4.owl").load()
 	obo = get_namespace("http://webprotege.stanford.edu/project/xpUFBIdmzwyCPpbfIg4hh")
 	all_parts = get_subclasses_onelevel('RDpBs6DXJfwjWljvKnjFFK7')
 	comp_parts = onto.search(iri = "*" + comp_name)[0].hasPart
