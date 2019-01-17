@@ -140,6 +140,10 @@ def create_right_labels(self, frame):
 		### Suggested part
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
+		# frame_scrollbar.pack(side="left", fill="both", expand=True, padx=20, pady=20)
+		# make scrollbar & listbox
+		self.scrollbar = Scrollbar(frame_tmp)
+		self.scrollbar.pack(side="right", fill="y")
 		self.listbox_sugg = Listbox(frame_tmp, width=50, height=20)
 		# self.listbox.bind('<<ListboxSelect>>', self.lb_onselect)
 		self.listbox_sugg.pack(side="left", fill="both", pady=10)

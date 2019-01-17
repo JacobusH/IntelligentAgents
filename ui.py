@@ -160,7 +160,8 @@ class Application(tk.Frame):
 				good_part = find_part(new_computer, x)
 				if good_part != None:
 					new_parts.append(good_part)
-					self.listbox_sugg.insert("end", "{}{}".format(x._name, (" " * 10) +good_part.name)) # part , name
+					self.listbox_sugg.insert("end", "{}{}".format("Computer: ", (" " * 2) +self.comp_name.get())) # computer
+					self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
 					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
 					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
 			else:
@@ -169,7 +170,8 @@ class Application(tk.Frame):
 		if le_mobo != None:
 			good_part = find_part(new_computer, x)
 			new_parts.append(good_part)
-			self.listbox_sugg.insert("end", "{}{:>35}".format(x._name, (" " * 10) +good_part.name)) # part , name
+			self.listbox_sugg.insert("end", "{}{}".format("Computer: ", (" " * 2) +self.comp_name.get())) # computer
+			self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
 			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
 			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
 
