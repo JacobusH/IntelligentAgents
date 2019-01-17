@@ -78,6 +78,9 @@ def create_right_labels(self, frame):
 		label_name_cpu.pack(side="left", pady=8)
 		self.label_val_cpu = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_cpu.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="CPU", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### Case
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -85,6 +88,9 @@ def create_right_labels(self, frame):
 		label_name_case.pack(side="left", pady=8)
 		self.label_val_case = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_case.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="Case", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### Cooling
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -92,6 +98,9 @@ def create_right_labels(self, frame):
 		label_name_cooling.pack(side="left", pady=8)
 		self.label_val_cooling = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_cooling.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="Cooling", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### GPU
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -99,6 +108,9 @@ def create_right_labels(self, frame):
 		label_name_gpu.pack(side="left", pady=8)
 		self.label_val_gpu = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_gpu.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="GPU", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### Memory
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -106,6 +118,9 @@ def create_right_labels(self, frame):
 		label_name_mem.pack(side="left", pady=8)
 		self.label_val_mem = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_mem.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="Memory", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### Mobo
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -113,6 +128,9 @@ def create_right_labels(self, frame):
 		label_name_mobo.pack(side="left", pady=8)
 		self.label_val_mobo = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_mobo.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="Motherboard", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### PSU
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -120,6 +138,9 @@ def create_right_labels(self, frame):
 		label_name_psu.pack(side="left", pady=8)
 		self.label_val_psu = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_psu.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="PSU", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### Storage
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
@@ -127,6 +148,9 @@ def create_right_labels(self, frame):
 		label_name_storage.pack(side="left", pady=8)
 		self.label_val_storage = tk.Label(frame_tmp, text=entry_text, width=22, anchor="e", wraplength=120)
 		self.label_val_storage.pack(side="left")
+		tmp_btn = tk.Button(frame_tmp, text="Remove", fg="black")
+		tmp_btn.config(padx=2, width=6, height=1, command= lambda t="Storage", btn = tmp_btn: self.remove_part(t, tmp_btn))
+		tmp_btn.pack(side="left")
 		### 'Add Computer' button
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")

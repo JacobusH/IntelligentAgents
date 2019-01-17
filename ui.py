@@ -130,6 +130,24 @@ class Application(tk.Frame):
 	def set_price(self, event):
 		print("hallo")
 
+	def remove_part(self, text, btn):
+		if text == "CPU":
+			self.label_val_cpu['text'] = "No Selection"
+		if text == "Case":
+			self.label_val_case['text'] = "No Selection"
+		if text == "Cooling":
+			self.label_val_cooling['text'] = "No Selection"
+		if text == "GPU":
+			self.label_val_gpu['text'] = "No Selection"
+		if text == "Memory":
+			self.label_val_mem['text'] = "No Selection"
+		if text == "Motherboard":
+			self.label_val_mobo['text'] = "No Selection"
+		if text == "PSU":
+			self.label_val_psu['text'] = "No Selection"
+		if text == "Storage":
+			self.label_val_storage['text'] = "No Selection"
+
 	def part_clicked(self, text, btn):
 		selected_piece = text
 		sub_pieces = get_subclasses_recur(selected_piece)
@@ -155,22 +173,25 @@ class Application(tk.Frame):
 		new_parts = []
 		# need to do mobo last
 		le_mobo = None 
+		tmp_comp = new_computer
+		# write the comp name once
+		self.listbox_sugg.insert("end", "{}{}".format("Computer: ", (" " * 2) +self.comp_name.get())) # computer
 		for x in missing_parts_obo:
 			if x.name != "Motherboard":
 				good_part = find_part(new_computer, x)
 				if good_part != None:
 					new_parts.append(good_part)
-					self.listbox_sugg.insert("end", "{}{}".format("Computer: ", (" " * 2) +self.comp_name.get())) # computer
 					self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
 					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
 					self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
+					# add to the a tmp computer that mobo uses so we can get a suggestion
+					tmp_comp.hasPart.append(x)
 			else:
 				le_mobo = x
 		# now do mobo
 		if le_mobo != None:
-			good_part = find_part(new_computer, x)
+			good_part = find_part(tmp_comp, x) # use tmp_comp here
 			new_parts.append(good_part)
-			self.listbox_sugg.insert("end", "{}{}".format("Computer: ", (" " * 2) +self.comp_name.get())) # computer
 			self.listbox_sugg.insert("end", "{}{}".format((" " * 4) +x._name, (" " * 10) +good_part.name)) # part , name
 			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Price: "), good_part.item_price[0])) # price
 			self.listbox_sugg.insert("end", "{}{}".format(((" " * 10) +"Delivery Days: "), good_part.delivery_days[0])) # delivery days
