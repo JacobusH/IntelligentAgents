@@ -154,7 +154,7 @@ def create_right_labels(self, frame):
 		### 'Add Computer' button
 		frame_tmp = tk.Frame(frame)
 		frame_tmp.pack(side="top")
-		button_add = tk.Button(frame_tmp, text="Add Computer", command=self.save_computer)
+		button_add = tk.Button(frame_tmp, text="Find Parts", command=self.save_computer)
 		button_add.pack(side="left")
 		### Text box to name the new computer build
 		self.comp_name = tk.StringVar()

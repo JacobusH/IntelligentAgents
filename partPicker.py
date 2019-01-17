@@ -4,7 +4,7 @@ import math
 import pprint
 from owlready2 import *
 
-is_debug = False
+is_debug = True
 
 
 def get_label(x):
@@ -105,14 +105,16 @@ def get_indivs(class_id):
 	# sync_reasoner()
 
 	# special for memory
-	if 'Memory' in str(obo[class_id].is_a[0]): # memory
+	if obo[class_id] == None or 'Memory' in str(obo[class_id].is_a[0]): # memory
+	# if 'Memory' in str(obo[class_id].is_a[0]): # memory
 		return [obo.Memory(class_id)]
 	else:
 		# return [obo[class_id]]
 		indivs = []
 		for i in obo[class_id].instances(): # only has bottom level indivs
-			print("indiv: %s", i)
-			indivs.append(i)
+			if str(i)[0] != 'x': 
+				print("indiv: %s", i)
+				indivs.append(i)
 		return(indivs)
 
 def get_obo_elem(elem_id):
